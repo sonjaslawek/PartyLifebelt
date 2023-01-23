@@ -1,8 +1,10 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -11,15 +13,54 @@
             <objects>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launchscreen-Background" translatesAutoresizingMaskIntoConstraints="NO" id="xbj-Jx-s7s">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HPG-V5-rfY">
+                                <rect key="frame" x="50" y="197" width="321" height="435"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launchscreen-Logo_" translatesAutoresizingMaskIntoConstraints="NO" id="acK-c7-ylw">
+                                        <rect key="frame" x="4" y="4" width="313" height="427"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="313" id="kVS-RH-5Sa"/>
+                                            <constraint firstAttribute="height" constant="427" id="xfi-Kr-mwu"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="acK-c7-ylw" firstAttribute="centerX" secondItem="HPG-V5-rfY" secondAttribute="centerX" id="Jxz-9t-m2u"/>
+                                    <constraint firstItem="acK-c7-ylw" firstAttribute="centerY" secondItem="HPG-V5-rfY" secondAttribute="centerY" id="lz7-mg-bge"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="HPG-V5-rfY" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="153" id="5QA-Vx-ocd"/>
+                            <constraint firstItem="xbj-Jx-s7s" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="GlY-5a-kA6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HPG-V5-rfY" secondAttribute="trailing" constant="43" id="d3B-Sb-hy5"/>
+                            <constraint firstItem="xbj-Jx-s7s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="d8r-C0-9VW"/>
+                            <constraint firstItem="HPG-V5-rfY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="dO4-qk-c28"/>
+                            <constraint firstAttribute="bottom" secondItem="xbj-Jx-s7s" secondAttribute="bottom" id="iqO-Cz-Swo"/>
+                            <constraint firstItem="xbj-Jx-s7s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="kTd-z5-lqO"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="HPG-V5-rfY" secondAttribute="bottom" constant="230" id="rw9-rS-OiS"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Launchscreen-Background" width="1080" height="1920"/>
+        <image name="Launchscreen-Logo_" width="250" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
