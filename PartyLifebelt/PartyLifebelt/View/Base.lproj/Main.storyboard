@@ -1,24 +1,124 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="PartyLifebelt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Backround" translatesAutoresizingMaskIntoConstraints="NO" id="GfT-1I-Tim">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKc-M6-W1z" userLabel="PartyView">
+                                <rect key="frame" x="82" y="84" width="250" height="298"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launchscreen-Logo_" translatesAutoresizingMaskIntoConstraints="NO" id="B2I-HQ-Gbr">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="298"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="B2I-HQ-Gbr" secondAttribute="bottom" id="AHV-l9-lKN"/>
+                                    <constraint firstItem="B2I-HQ-Gbr" firstAttribute="leading" secondItem="NKc-M6-W1z" secondAttribute="leading" id="E9K-le-lyF"/>
+                                    <constraint firstItem="B2I-HQ-Gbr" firstAttribute="top" secondItem="NKc-M6-W1z" secondAttribute="top" id="QIb-sn-OKl"/>
+                                    <constraint firstAttribute="trailing" secondItem="B2I-HQ-Gbr" secondAttribute="trailing" id="XCt-Xt-WOJ"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="0vw-K5-R42">
+                                <rect key="frame" x="70" y="422" width="274" height="300"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ToQ-QT-i9w" userLabel="GamesButton">
+                                        <rect key="frame" x="0.0" y="0.0" width="274" height="70"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="3FX-ho-4Qh"/>
+                                        </constraints>
+                                        <color key="tintColor" red="0.67622715229999997" green="0.94068425889999996" blue="0.95687156920000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="GAMES" imagePadding="0.0">
+                                            <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage"/>
+                                            <color key="baseForegroundColor" red="0.67622715229999997" green="0.94068425889999996" blue="0.95687156920000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </buttonConfiguration>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                                <integer key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColor">
+                                                <color key="value" red="0.67622715229999997" green="0.94068425889999996" blue="0.95687156920000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="gamesButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="74Z-yQ-1x3"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nEw-kO-soD" userLabel="DrinksButton">
+                                        <rect key="frame" x="0.0" y="115" width="274" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="ZI6-Ga-9OJ"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="DRINKS"/>
+                                        <connections>
+                                            <action selector="drinksButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="teS-LK-vxl"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEZ-lj-IG4" userLabel="FoodButton">
+                                        <rect key="frame" x="0.0" y="230" width="274" height="70"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="70" id="o7v-fS-D5t"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="FOOD"/>
+                                        <connections>
+                                            <action selector="foodButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8dU-Nn-O16"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="NKc-M6-W1z" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="82" id="4IR-aU-LIh"/>
+                            <constraint firstItem="GfT-1I-Tim" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="5uO-wS-Qpu"/>
+                            <constraint firstItem="0vw-K5-R42" firstAttribute="top" secondItem="NKc-M6-W1z" secondAttribute="bottom" constant="40" id="94z-Uc-fHs"/>
+                            <constraint firstAttribute="bottom" secondItem="GfT-1I-Tim" secondAttribute="bottom" id="FNn-2W-61e"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NKc-M6-W1z" secondAttribute="trailing" constant="82" id="Rbf-sc-cb6"/>
+                            <constraint firstItem="GfT-1I-Tim" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="VRZ-bK-SMm"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0vw-K5-R42" secondAttribute="bottom" constant="140" id="WWK-RW-VMS"/>
+                            <constraint firstItem="GfT-1I-Tim" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XYJ-sw-zfZ"/>
+                            <constraint firstItem="NKc-M6-W1z" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="asc-Wx-rll"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0vw-K5-R42" secondAttribute="trailing" constant="70" id="g2X-57-YcQ"/>
+                            <constraint firstItem="0vw-K5-R42" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="h7q-7B-C9Y"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="18.840579710144929" y="80.357142857142847"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Backround" width="1080" height="1920"/>
+        <image name="DRINKS" width="250" height="250"/>
+        <image name="FOOD" width="250" height="250"/>
+        <image name="GAMES" width="250" height="250"/>
+        <image name="Launchscreen-Logo_" width="250" height="250"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
