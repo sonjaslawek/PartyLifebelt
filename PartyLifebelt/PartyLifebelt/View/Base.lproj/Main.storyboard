@@ -11,7 +11,7 @@
         <!--Dashboard View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="DashboardViewController" customModule="PartyLifebelt" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DashboardViewController" id="BYZ-38-t0r" customClass="DashboardViewController" customModule="PartyLifebelt" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -20,10 +20,10 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NKc-M6-W1z" userLabel="PartyView">
-                                <rect key="frame" x="82" y="84" width="250" height="298"/>
+                                <rect key="frame" x="82" y="128" width="250" height="254"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Launchscreen-Logo_" translatesAutoresizingMaskIntoConstraints="NO" id="B2I-HQ-Gbr">
-                                        <rect key="frame" x="0.0" y="0.0" width="250" height="298"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="254"/>
                                     </imageView>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -105,18 +105,101 @@
                             <constraint firstItem="0vw-K5-R42" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="h7q-7B-C9Y"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="HNQ-vI-Uh5"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="18.840579710144929" y="80.357142857142847"/>
+            <point key="canvasLocation" x="928.98550724637687" y="80.357142857142847"/>
+        </scene>
+        <!--Drinks View Controller-->
+        <scene sceneID="Yug-kV-u5u">
+            <objects>
+                <viewController storyboardIdentifier="DrinksViewController" id="jc0-CI-pgw" customClass="DrinksViewController" customModule="PartyLifebelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uZN-hI-RWT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DRINKSBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Dzq-FZ-LsR">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fVH-S2-GLa"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="gxg-Wy-QWO">
+                        <barButtonItem key="backBarButtonItem" title=" " id="qdd-Vh-BFp"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dEG-Fd-kKE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1721.7391304347827" y="242.41071428571428"/>
+        </scene>
+        <!--Food View Controller-->
+        <scene sceneID="Jin-OY-zeb">
+            <objects>
+                <viewController storyboardIdentifier="FoodViewController" id="mH0-1S-Wn1" customClass="FoodViewController" customModule="PartyLifebelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <imageView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOODBackground" id="Ix4-tP-WPi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    </imageView>
+                    <navigationItem key="navigationItem" id="cKz-N4-VjQ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0jK-7O-gMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1709" y="960"/>
+        </scene>
+        <!--Games View Controller-->
+        <scene sceneID="9UV-Ha-tTr">
+            <objects>
+                <viewController storyboardIdentifier="GamesViewController" id="TSi-am-En6" customClass="GamesViewController" customModule="PartyLifebelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ucj-cW-vhr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GAMESBackground" translatesAutoresizingMaskIntoConstraints="NO" id="dUi-5D-Pv6">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="47l-h2-vN7"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="never" id="wOT-Oj-4br"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G0f-Ov-gTU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1708.6956521739132" y="-508.25892857142856"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="j24-EM-ZJV">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nun-3p-LDM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="suw-tZ-aRK" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" backIndicatorImage="homeButton" backIndicatorTransitionMaskImage="homeButton" id="dTQ-k7-7Yd">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Fxz-CH-e0E"/>
+                    </connections>
+                </navigationController>
+            </objects>
+            <point key="canvasLocation" x="225" y="97"/>
         </scene>
     </scenes>
     <resources>
         <image name="Backround" width="1080" height="1920"/>
         <image name="DRINKS" width="250" height="250"/>
+        <image name="DRINKSBackground" width="1080" height="1920"/>
         <image name="FOOD" width="250" height="250"/>
+        <image name="FOODBackground" width="1080" height="1920"/>
         <image name="GAMES" width="250" height="250"/>
+        <image name="GAMESBackground" width="1080" height="1920"/>
         <image name="Launchscreen-Logo_" width="250" height="250"/>
+        <image name="homeButton" width="250" height="250"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
