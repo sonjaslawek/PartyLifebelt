@@ -40,4 +40,28 @@ class MainCoordinator: Coordinator {
         fc.coordinator = self
         navigationController.pushViewController(fc, animated: true)
     }
+    
+    func truthOrDareGameView() {
+        let tod = TruthOrDareGameViewController.instantiate()
+        tod.coordinator = self
+        navigationController.pushViewController(tod, animated: true)
+    }
+    
+    func neverHaveIEverGameView() {
+        let nh = NeverHaveIEverGameViewController.instantiate()
+        nh.coordinator = self
+        navigationController.pushViewController(nh, animated: true)
+    }
+    
+    func thisOrThatGameView() {
+        let tot = ThisOrThatGameViewController.instantiate()
+        tot.coordinator = self
+        navigationController.pushViewController(tot, animated: true)
+    }
+    
+    func sevenSecondsGameView() {
+        let ss = SevenSecondsGameViewController.instantiate()
+        ss.coordinator = self
+        navigationController.pushViewController(ss, animated: true)
+    }
 }

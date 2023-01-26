@@ -19,6 +19,10 @@
 		639457102981B44F0069B40F /* GamesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394570F2981B44F0069B40F /* GamesViewController.swift */; };
 		639457122981B45B0069B40F /* DrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639457112981B45B0069B40F /* DrinksViewController.swift */; };
 		639457142981B4680069B40F /* FoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639457132981B4680069B40F /* FoodViewController.swift */; };
+		639457192982D8CE0069B40F /* TruthOrDareGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639457182982D8CE0069B40F /* TruthOrDareGameViewController.swift */; };
+		6394571B2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394571A2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift */; };
+		6394571D2982DA030069B40F /* ThisOrThatGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394571C2982DA030069B40F /* ThisOrThatGameViewController.swift */; };
+		6394571F2982DA8B0069B40F /* SevenSecondsGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394571E2982DA8B0069B40F /* SevenSecondsGameViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		6394570F2981B44F0069B40F /* GamesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamesViewController.swift; sourceTree = "<group>"; };
 		639457112981B45B0069B40F /* DrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksViewController.swift; sourceTree = "<group>"; };
 		639457132981B4680069B40F /* FoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodViewController.swift; sourceTree = "<group>"; };
+		639457182982D8CE0069B40F /* TruthOrDareGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TruthOrDareGameViewController.swift; sourceTree = "<group>"; };
+		6394571A2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeverHaveIEverGameViewController.swift; sourceTree = "<group>"; };
+		6394571C2982DA030069B40F /* ThisOrThatGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisOrThatGameViewController.swift; sourceTree = "<group>"; };
+		6394571E2982DA8B0069B40F /* SevenSecondsGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenSecondsGameViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +112,10 @@
 				639457112981B45B0069B40F /* DrinksViewController.swift */,
 				6394570F2981B44F0069B40F /* GamesViewController.swift */,
 				639457132981B4680069B40F /* FoodViewController.swift */,
+				639457182982D8CE0069B40F /* TruthOrDareGameViewController.swift */,
+				6394571A2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift */,
+				6394571C2982DA030069B40F /* ThisOrThatGameViewController.swift */,
+				6394571E2982DA8B0069B40F /* SevenSecondsGameViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -196,15 +208,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6394571B2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift in Sources */,
 				639457102981B44F0069B40F /* GamesViewController.swift in Sources */,
 				6394570A2981AF300069B40F /* Coordinator.swift in Sources */,
 				6394570E2981B17D0069B40F /* MainCoordinator.swift in Sources */,
+				6394571D2982DA030069B40F /* ThisOrThatGameViewController.swift in Sources */,
 				639456F4297EBCF60069B40F /* DashboardViewController.swift in Sources */,
+				6394571F2982DA8B0069B40F /* SevenSecondsGameViewController.swift in Sources */,
 				639457142981B4680069B40F /* FoodViewController.swift in Sources */,
 				6394570C2981AFD60069B40F /* Storyboarded.swift in Sources */,
 				639456F0297EBCF60069B40F /* AppDelegate.swift in Sources */,
 				639456F2297EBCF60069B40F /* SceneDelegate.swift in Sources */,
 				639457122981B45B0069B40F /* DrinksViewController.swift in Sources */,
+				639457192982D8CE0069B40F /* TruthOrDareGameViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
