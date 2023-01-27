@@ -10,29 +10,33 @@ import UIKit
 class TruthOrDareGameViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
-
+    var result: TruthOrDareModel?
+    
     @IBOutlet weak var truthOrDareLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarImage()
+        parseJSON()
     }
     
     @IBAction func truthButton(_ sender: Any) {
         print("truth")
-        truthOrDareLabel.text = "You choose TRUTH!"
+        if let result = result {
+            truthOrDareLabel.text = result.questions.randomElement()
+        }
     }
     
     @IBAction func dareButton(_ sender: Any) {
         print("dare")
-        truthOrDareLabel.text = "You choose DARE!"
+        if let result = result {
+            truthOrDareLabel.text = result.dares.randomElement()
+        }
     }
-    
     
     @IBAction func restartButton(_ sender: Any) {
         print("reset")
         truthOrDareLabel.text = "Choose Truth or Dare!"
-        
     }
     
     
@@ -47,4 +51,20 @@ class TruthOrDareGameViewController: UIViewController, Storyboarded {
     @objc func goTo() {
         coordinator?.gamesView()
     }
+    
+    // MARK: Parsing JSON
+    private func parseJSON() {
+        guard let path = Bundle.main.path(forResource: "TruthOrDare", ofType: "json")
+        else {
+            return
+        }
+        let url = URL(fileURLWithPath: path)
+        
+        do {
+            let jsonFile = try Data(contentsOf: url)
+            result = try JSONDecoder().decode(TruthOrDareModel.self, from: jsonFile)
+        } catch {
+                print("Error \(error)")
+            }
+        }
 }

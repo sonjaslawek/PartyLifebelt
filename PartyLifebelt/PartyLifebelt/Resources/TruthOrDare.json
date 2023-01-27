@@ -1,41 +1,79 @@
-# Truth or Dare questions
-
 {
-    [
-        "title": "Truth"
-        "questions": [
-            "At what age did you have your first kiss and with whom?",
-            "Choose three people with whom you want to spend the rest of your life on the island. Why them?",
-            "If you had the opportunity to sleep with a celebrity, who would you choose?",
-            "Have you ever had an awkward moment during a date? What was it like?",
-            "What's the most embarrassing thing you've done to get someone's attention?",
-            "Would you break up with your girlfriend/boyfriend for a million dollars?",
-            "What are the three most important things in your life right now?",
-            "With whom did you lose your virginity?",
-            
-        
-        ]
-    ]
+            "titleTruth": "Truth",
+            "questions": [
+                "At what age did you have your first kiss and with whom?",
+                "Choose three people with whom you want to spend the rest of your life on the island. Why them?",
+                "If you had the opportunity to sleep with a celebrity, who would you choose?",
+                "Have you ever had an awkward moment during a date? What was it like?",
+                "What's the most embarrassing thing you've done to get someone's attention?",
+                "Would you break up with your girlfriend/boyfriend for a million dollars?",
+                "What are the three most important things in your life right now?",
+                "With whom did you lose your virginity?",
+                "What is your greatest secret?",
+                "What wouldn't you do for a million dollars?",
+                "Who is your least favorite friend?",
+                "Have you done anything illegal in your life? What kind of things?",
+                "How often do you masturbate?",
+                "Who is the most annoying person in your life?",
+                "How many people have you had sex with?",
+                "What was the longest time without showering or brushing your teeth?",
+                "Who in the room would you sell for a million dollars?",
+                "What's the bravest thing you've ever done?",
+                "If you were to make money illegally, how would you do it?",
+                "What is the worst thing you have ever done to anyone?",
+                "Who was your greatest love?",
+                "What is your darkest fantasy?",
+                "Did something embarrassing happen to you on a date?",
+                "Have you ever taken drugs?",
+                "Do you snore during the night?",
+                "What are you most afraid of?",
+                "What was your worst date?",
+                "Who from this round would you NOT invite to the next event?",
+                "Have you ever stuffed a bra or panties?",
+                "What is your biggest fear that no one knows about?",
+                "Who have you ever been in love with that no one knows about?",
+                "Which position do you like best?",
+                "What is your favorite category of XXX movies?",
+                "You have three free wishes. What would you wish for?",
+                "What was the last lie that you told someone?",
+                "Which video best describes your life?"
+            ],
+            "titleDare": "Dare",
+            "dares": [
+                "Dance to a song chosen by the group",
+                "Try to do a magic trick",
+                "On the spot, arrange a poem based on the group's chosen theme",
+                "Open a bag of snacks using only your mouth",
+                "Eat a spoon of the spiciest thing you have in your kitchen",
+                "Let other players transform your hairstyle",
+                "Do the plank for a full minute",
+                "Drink a GLASS of pure lemon juice and try not to make a face",
+                "Tell each person in the room what you don't like about them and then hug them to make amends",
+                "Twerking in front of a group",
+                "Make each person in the group smile, continue until everyone smiles",
+                "Remove socks with your teeth",
+                "Pick someone in the room and sniff their armpits for 1 minute",
+                "Give someone a foot massage using your foot as well",
+                "Let the eyebrows be plucked by another player",
+                "Convince someone to buy you as a slave - offering them the services you need to comply!",
+                "Sell your body to participants like a produce from a vegetable stall",
+                "Drink your next beverage to the bottom for your health Ex",
+                "Show all your naked belly",
+                "Organize a catwalk like the one in Top Model",
+                "Pretend to be some celebrity - if no one guesses who you are... you know what to do!",
+                "Speaks 2 rounds of German only",
+                "Perform a belly dance for 1 minute",
+                "Give a teammate a 2-minute head massage",
+                "Just eat something without using your hands",
+                "Eat something and pretend it's the tastiest thing you've ever eaten",
+                "Call a friend and say that you are pregnant or that your partner is pregnant",
+                "Make a striptease",
+                "Paint a mono-brew, then post a selfie on IG",
+                "Drink a glass of olive oil",
+                "Talk to the subject and pretend to argue",
+                "Tell us about the worst gift you ever received",
+                "Do 50 push-ups",
+                "Eat a clove of garlic",
+                "Place 4 ice cubes in your pants"
+            ]
 }
-
-{
-    [
-        "title": "Dare"
-        "questions": [
-            "Dance to a song chosen by the group",
-            "Try to do a magic trick",
-            "On the spot, arrange a poem based on the group's chosen theme",
-            "Open a bag of snacks using only your mouth",
-            "Eat a spoon of the spiciest thing you have in your kitchen",
-            "Let other players transform your hairstyle",
-            "Do the plank for a full minute",
-            "Drink a GLASS of pure lemon juice and try not to make a face",
-            "Tell each person in the room what you don't like about them and then hug them to make amends",
-            "Twerking in front of a group",
-            "Make each person in the group smile, continue until everyone smiles",
-            "Remove socks with your teeth"
-        ]
-    ]
-}
-
-
