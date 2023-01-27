@@ -1,0 +1,41 @@
+# Truth or Dare questions
+
+{
+    [
+        "title": "Truth"
+        "questions": [
+            "At what age did you have your first kiss and with whom?",
+            "Choose three people with whom you want to spend the rest of your life on the island. Why them?",
+            "If you had the opportunity to sleep with a celebrity, who would you choose?",
+            "Have you ever had an awkward moment during a date? What was it like?",
+            "What's the most embarrassing thing you've done to get someone's attention?",
+            "Would you break up with your girlfriend/boyfriend for a million dollars?",
+            "What are the three most important things in your life right now?",
+            "With whom did you lose your virginity?",
+            
+        
+        ]
+    ]
+}
+
+{
+    [
+        "title": "Dare"
+        "questions": [
+            "Dance to a song chosen by the group",
+            "Try to do a magic trick",
+            "On the spot, arrange a poem based on the group's chosen theme",
+            "Open a bag of snacks using only your mouth",
+            "Eat a spoon of the spiciest thing you have in your kitchen",
+            "Let other players transform your hairstyle",
+            "Do the plank for a full minute",
+            "Drink a GLASS of pure lemon juice and try not to make a face",
+            "Tell each person in the room what you don't like about them and then hug them to make amends",
+            "Twerking in front of a group",
+            "Make each person in the group smile, continue until everyone smiles",
+            "Remove socks with your teeth"
+        ]
+    ]
+}
+
+
