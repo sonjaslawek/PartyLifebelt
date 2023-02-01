@@ -31,6 +31,7 @@
 		6394571B2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394571A2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift */; };
 		6394571D2982DA030069B40F /* ThisOrThatGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394571C2982DA030069B40F /* ThisOrThatGameViewController.swift */; };
 		6394571F2982DA8B0069B40F /* SevenSecondsGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6394571E2982DA8B0069B40F /* SevenSecondsGameViewController.swift */; };
+		6524E3682340E77640A0C5C2 /* Pods_PartyLifebelt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C88790884DC30CC27ED78F /* Pods_PartyLifebelt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +61,9 @@
 		6394571A2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeverHaveIEverGameViewController.swift; sourceTree = "<group>"; };
 		6394571C2982DA030069B40F /* ThisOrThatGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisOrThatGameViewController.swift; sourceTree = "<group>"; };
 		6394571E2982DA8B0069B40F /* SevenSecondsGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenSecondsGameViewController.swift; sourceTree = "<group>"; };
+		6E6CFD76CDA1BF1F6177B9D7 /* Pods-PartyLifebelt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyLifebelt.release.xcconfig"; path = "Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt.release.xcconfig"; sourceTree = "<group>"; };
+		D8C88790884DC30CC27ED78F /* Pods_PartyLifebelt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PartyLifebelt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FBEB287DEF6BC49AAE94D77C /* Pods-PartyLifebelt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyLifebelt.debug.xcconfig"; path = "Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,17 +71,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6524E3682340E77640A0C5C2 /* Pods_PartyLifebelt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4989E51BAA851622BD617456 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D8C88790884DC30CC27ED78F /* Pods_PartyLifebelt.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		639456E3297EBCF60069B40F = {
 			isa = PBXGroup;
 			children = (
 				639456EE297EBCF60069B40F /* PartyLifebelt */,
 				639456ED297EBCF60069B40F /* Products */,
+				78F2B87AA2FEC5D16E2A2F92 /* Pods */,
+				4989E51BAA851622BD617456 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -161,6 +176,16 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		78F2B87AA2FEC5D16E2A2F92 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FBEB287DEF6BC49AAE94D77C /* Pods-PartyLifebelt.debug.xcconfig */,
+				6E6CFD76CDA1BF1F6177B9D7 /* Pods-PartyLifebelt.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -168,9 +193,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 63945700297EBCFA0069B40F /* Build configuration list for PBXNativeTarget "PartyLifebelt" */;
 			buildPhases = (
+				552F8B611C856B11B7FE619E /* [CP] Check Pods Manifest.lock */,
 				639456E8297EBCF60069B40F /* Sources */,
 				639456E9297EBCF60069B40F /* Frameworks */,
 				639456EA297EBCF60069B40F /* Resources */,
+				EBC4FC3AD0F5CF47AD1F6C66 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -230,6 +257,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		552F8B611C856B11B7FE619E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PartyLifebelt-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EBC4FC3AD0F5CF47AD1F6C66 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		639456E8297EBCF60069B40F /* Sources */ = {
@@ -394,6 +463,7 @@
 		};
 		63945701297EBCFA0069B40F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBEB287DEF6BC49AAE94D77C /* Pods-PartyLifebelt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -420,6 +490,7 @@
 		};
 		63945702297EBCFA0069B40F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6E6CFD76CDA1BF1F6177B9D7 /* Pods-PartyLifebelt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
