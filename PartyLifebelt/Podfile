@@ -1,0 +1,8 @@
+
+target 'PartyLifebelt' do
+  use_frameworks!
+
+  # Pods for PartyLifebelt
+pod 'AMPopTip'
+
+end

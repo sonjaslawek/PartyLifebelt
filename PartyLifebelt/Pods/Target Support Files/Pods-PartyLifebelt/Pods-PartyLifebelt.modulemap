@@ -1,0 +1,6 @@
+framework module Pods_PartyLifebelt {
+  umbrella header "Pods-PartyLifebelt-umbrella.h"
+
+  export *
+  module * { export * }
+}

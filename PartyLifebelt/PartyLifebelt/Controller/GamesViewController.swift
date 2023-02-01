@@ -6,14 +6,22 @@
 //
 
 import UIKit
+import AMPopTip
 
 class GamesViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
+    var popTip = PopTip()
+    @IBOutlet weak var truthOrDareTooltip: UIButton!
+    @IBOutlet weak var neverHaveIEverTooltip: UIButton!
+    
+    @IBOutlet weak var gamesButtonsView: UIView!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarImage()
+
     }
     
     @IBAction func truthOrDareGameButton(_ sender: Any) {
@@ -36,6 +44,43 @@ class GamesViewController: UIViewController, Storyboarded {
         print("7 seconds")
     }
     
+    @IBAction func truthOrDareToolTip(_ sender: Any) {
+        print("tooltip1")
+        
+        print(truthOrDareTooltip.frame)
+        let finiszHeigh = truthOrDareTooltip.frame.height + gamesButtonsView.frame.height + 33
+        let finiszWidth = truthOrDareTooltip.frame.width + gamesButtonsView.frame.width - 66
+        let fromToolTip = CGRect(x: 0, y: 0, width: finiszWidth, height: finiszHeigh)
+    
+        popTip.show(text: "If you choose True - you must trustly answer the question, when you choose Dare - you must do the challange! Easy, isn't it?", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
+        popTip.bubbleColor = .white
+        popTip.textColor = .black
+        popTip.shadowColor = .lightGray
+
+    }
+    
+    @IBAction func neverHaveIEverToolTip(_ sender: Any) {
+        print("tooltip2")
+        print(neverHaveIEverTooltip.frame)
+        print(gamesButtonsView.frame)
+        
+        
+        let finiszHeigh = neverHaveIEverTooltip.frame.height + gamesButtonsView.frame.height + 33
+        let finiszWidth = neverHaveIEverTooltip.frame.width + gamesButtonsView.frame.width - 66
+        let fromToolTip = CGRect(x: finiszWidth, y: finiszHeigh, width: 0, height: 0)
+    
+        popTip.show(text: "If you see the sentence have you ever do - you need drink your JUICY. It's fun!", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
+        popTip.bubbleColor = .white
+        popTip.textColor = .black
+        popTip.shadowColor = .lightGray
+    }
+    
+    @IBAction func thisOrThatToolTip(_ sender: Any) {
+    }
+    
+    @IBAction func sevenSecondsToolTip(_ sender: Any) {
+    }
+    
     
     // MARK: Setting Navigation Bar
     private func setNavigationBarImage() {
@@ -49,6 +94,9 @@ class GamesViewController: UIViewController, Storyboarded {
         coordinator?.start()
     }
 }
+
+// MARK: Constraints for buttons
+
 
 
 
