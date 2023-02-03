@@ -401,6 +401,8 @@
                     <connections>
                         <outlet property="gamesButtonsView" destination="qM3-u0-ViY" id="tcx-yU-rmy"/>
                         <outlet property="neverHaveIEverTooltip" destination="gxK-DP-Mes" id="zsI-Xh-2qI"/>
+                        <outlet property="sevenSecondsTooltip" destination="cgW-O2-rGI" id="578-zO-V1O"/>
+                        <outlet property="thisOrThatTooltip" destination="kGY-yZ-3TC" id="weD-86-fFf"/>
                         <outlet property="truthOrDareTooltip" destination="qOh-d8-sZ4" id="Dun-HV-uk0"/>
                     </connections>
                 </viewController>

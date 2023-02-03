@@ -12,8 +12,11 @@ class GamesViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
     var popTip = PopTip()
+    
     @IBOutlet weak var truthOrDareTooltip: UIButton!
     @IBOutlet weak var neverHaveIEverTooltip: UIButton!
+    @IBOutlet weak var thisOrThatTooltip: UIButton!
+    @IBOutlet weak var sevenSecondsTooltip: UIButton!
     
     @IBOutlet weak var gamesButtonsView: UIView!
     
@@ -21,36 +24,30 @@ class GamesViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarImage()
-
     }
     
     @IBAction func truthOrDareGameButton(_ sender: Any) {
         coordinator?.truthOrDareGameView()
-        print("Truth or Dare")
     }
     
     @IBAction func neverHaveIEverGameButton(_ sender: Any) {
         coordinator?.neverHaveIEverGameView()
-        print("Never have I ever")
+        
     }
     
     @IBAction func thisOrThatGameButton(_ sender: Any) {
         coordinator?.thisOrThatGameView()
-        print("This or That")
     }
     
     @IBAction func sevenSecondsGameButton(_ sender: Any) {
         coordinator?.sevenSecondsGameView()
-        print("7 seconds")
     }
     
     @IBAction func truthOrDareToolTip(_ sender: Any) {
-        print("tooltip1")
         
-        print(truthOrDareTooltip.frame)
-        let finiszHeigh = truthOrDareTooltip.frame.height + gamesButtonsView.frame.height + 33
-        let finiszWidth = truthOrDareTooltip.frame.width + gamesButtonsView.frame.width - 66
-        let fromToolTip = CGRect(x: 0, y: 0, width: finiszWidth, height: finiszHeigh)
+        let finishHeigh = truthOrDareTooltip.frame.height + gamesButtonsView.frame.height + 8
+        let finishWidth = truthOrDareTooltip.frame.width + gamesButtonsView.frame.width - 223
+        let fromToolTip = CGRect(x: finishWidth, y: finishHeigh, width: 0, height: 0)
     
         popTip.show(text: "If you choose True - you must trustly answer the question, when you choose Dare - you must do the challange! Easy, isn't it?", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
         popTip.bubbleColor = .white
@@ -60,14 +57,10 @@ class GamesViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func neverHaveIEverToolTip(_ sender: Any) {
-        print("tooltip2")
-        print(neverHaveIEverTooltip.frame)
-        print(gamesButtonsView.frame)
         
-        
-        let finiszHeigh = neverHaveIEverTooltip.frame.height + gamesButtonsView.frame.height + 33
-        let finiszWidth = neverHaveIEverTooltip.frame.width + gamesButtonsView.frame.width - 66
-        let fromToolTip = CGRect(x: finiszWidth, y: finiszHeigh, width: 0, height: 0)
+        let finishHeigh = neverHaveIEverTooltip.frame.height + gamesButtonsView.frame.height + 8
+        let finishWidth = neverHaveIEverTooltip.frame.width + gamesButtonsView.frame.width - 52
+        let fromToolTip = CGRect(x: finishWidth, y: finishHeigh, width: 0, height: 0)
     
         popTip.show(text: "If you see the sentence have you ever do - you need drink your JUICY. It's fun!", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
         popTip.bubbleColor = .white
@@ -76,9 +69,27 @@ class GamesViewController: UIViewController, Storyboarded {
     }
     
     @IBAction func thisOrThatToolTip(_ sender: Any) {
+        
+        let finishHeigh = thisOrThatTooltip.frame.height + gamesButtonsView.frame.height + 235
+        let finishWidth = thisOrThatTooltip.frame.width + gamesButtonsView.frame.width - 223
+        let fromToolTip = CGRect(x: finishWidth, y: finishHeigh, width: 0, height: 0)
+    
+        popTip.show(text: "Each player chooses one of the options, the option that the minority chose loses and those voting for it must drink!", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
+        popTip.bubbleColor = .white
+        popTip.textColor = .black
+        popTip.shadowColor = .lightGray
     }
     
     @IBAction func sevenSecondsToolTip(_ sender: Any) {
+        
+        let finishHeigh = sevenSecondsTooltip.frame.height + gamesButtonsView.frame.height + 235
+        let finishWidth = sevenSecondsTooltip.frame.width + gamesButtonsView.frame.width - 52
+        let fromToolTip = CGRect(x: finishWidth, y: finishHeigh, width: 0, height: 0)
+    
+        popTip.show(text: "Get your stopwatch ready! Once the task is displayed and read, the player has 7 seconds to complete the instruction! If he fails he need to drink! Be fast!", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
+        popTip.bubbleColor = .white
+        popTip.textColor = .black
+        popTip.shadowColor = .lightGray
     }
     
     
@@ -94,8 +105,6 @@ class GamesViewController: UIViewController, Storyboarded {
         coordinator?.start()
     }
 }
-
-// MARK: Constraints for buttons
 
 
 
