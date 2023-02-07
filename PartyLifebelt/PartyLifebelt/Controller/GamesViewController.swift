@@ -45,11 +45,11 @@ class GamesViewController: UIViewController, Storyboarded {
     
     @IBAction func truthOrDareToolTip(_ sender: Any) {
         
-        let finishHeigh = truthOrDareTooltip.frame.height + gamesButtonsView.frame.height + 8
-        let finishWidth = truthOrDareTooltip.frame.width + gamesButtonsView.frame.width - 223
-        let fromToolTip = CGRect(x: finishWidth, y: finishHeigh, width: 0, height: 0)
-    
-        popTip.show(text: "If you choose True - you must trustly answer the question, when you choose Dare - you must do the challange! Easy, isn't it?", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
+//        let finishHeigh = truthOrDareTooltip.frame.height + gamesButtonsView.frame.height + 8
+//        let finishWidth = truthOrDareTooltip.frame.width + gamesButtonsView.frame.width - 223
+//        let fromToolTip = CGRect(x: finishWidth, y: finishHeigh, width: 0, height: 0)
+        guard let truth = truthOrDareTooltip.imageView else { return }
+        popTip.show(text: "If you choose True - you must trustly answer the question, when you choose Dare - you must do the challange! Easy, isn't it?", direction: .auto, maxWidth: 200, in: truth, from: CGRect(x: truth.frame.height/2, y: truth.frame.width/2, width: 0, height: 0))
         popTip.bubbleColor = .white
         popTip.textColor = .black
         popTip.shadowColor = .lightGray
