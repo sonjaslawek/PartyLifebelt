@@ -657,9 +657,9 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="or" translatesAutoresizingMaskIntoConstraints="NO" id="zwe-GS-oTU">
-                                                <rect key="frame" x="3.5" y="240" width="312" height="87"/>
+                                                <rect key="frame" x="3.5" y="240" width="312" height="65"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="height" constant="87" id="2U6-Fi-Why"/>
+                                                    <constraint firstAttribute="height" constant="65" id="2U6-Fi-Why"/>
                                                 </constraints>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="that?" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Cp-ta-IDa">
@@ -672,16 +672,16 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="YouChoose" translatesAutoresizingMaskIntoConstraints="NO" id="ed7-6X-lbs">
-                                                <rect key="frame" x="3.5" y="34" width="312" height="123"/>
+                                                <rect key="frame" x="3.5" y="50" width="312" height="107"/>
                                             </imageView>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="3Cp-ta-IDa" firstAttribute="trailing" secondItem="zwe-GS-oTU" secondAttribute="trailing" id="1Cc-Mt-Y3e"/>
                                             <constraint firstAttribute="bottom" secondItem="3Cp-ta-IDa" secondAttribute="bottom" id="4tJ-Gr-tAh"/>
-                                            <constraint firstItem="3Cp-ta-IDa" firstAttribute="top" secondItem="zwe-GS-oTU" secondAttribute="bottom" constant="-14" id="6mq-rq-3xK"/>
+                                            <constraint firstItem="3Cp-ta-IDa" firstAttribute="top" secondItem="zwe-GS-oTU" secondAttribute="bottom" constant="8" id="6mq-rq-3xK"/>
                                             <constraint firstItem="s4a-0J-HNj" firstAttribute="top" secondItem="ed7-6X-lbs" secondAttribute="bottom" constant="-4" id="7De-hJ-h2E"/>
-                                            <constraint firstItem="3Cp-ta-IDa" firstAttribute="top" secondItem="zwe-GS-oTU" secondAttribute="bottom" constant="-14" id="DkS-yi-LvM"/>
+                                            <constraint firstItem="3Cp-ta-IDa" firstAttribute="top" secondItem="zwe-GS-oTU" secondAttribute="bottom" constant="8" id="DkS-yi-LvM"/>
                                             <constraint firstItem="zwe-GS-oTU" firstAttribute="top" secondItem="s4a-0J-HNj" secondAttribute="bottom" constant="-4" id="FTV-I4-gy4"/>
                                             <constraint firstItem="zwe-GS-oTU" firstAttribute="top" secondItem="s4a-0J-HNj" secondAttribute="bottom" constant="-4" id="Nxt-Tm-bzJ"/>
                                             <constraint firstItem="zwe-GS-oTU" firstAttribute="top" secondItem="s4a-0J-HNj" secondAttribute="bottom" constant="-4" id="O60-nj-8no"/>
@@ -691,9 +691,9 @@
                                             <constraint firstItem="3Cp-ta-IDa" firstAttribute="leading" secondItem="zwe-GS-oTU" secondAttribute="leading" id="aJb-yz-z30"/>
                                             <constraint firstAttribute="trailing" secondItem="zwe-GS-oTU" secondAttribute="trailing" constant="3.5" id="cy1-QT-vGg"/>
                                             <constraint firstItem="3Cp-ta-IDa" firstAttribute="top" secondItem="d4c-2C-S8m" secondAttribute="top" constant="313" id="eTM-vd-8od"/>
-                                            <constraint firstItem="3Cp-ta-IDa" firstAttribute="top" secondItem="zwe-GS-oTU" secondAttribute="bottom" constant="-14" id="h66-9i-3fp"/>
+                                            <constraint firstItem="3Cp-ta-IDa" firstAttribute="top" secondItem="zwe-GS-oTU" secondAttribute="bottom" constant="8" id="h66-9i-3fp"/>
                                             <constraint firstAttribute="trailing" secondItem="ed7-6X-lbs" secondAttribute="trailing" constant="3.5" id="i2Y-9O-Jj6"/>
-                                            <constraint firstItem="ed7-6X-lbs" firstAttribute="top" secondItem="d4c-2C-S8m" secondAttribute="top" constant="34" id="ndh-l5-gOw"/>
+                                            <constraint firstItem="ed7-6X-lbs" firstAttribute="top" secondItem="d4c-2C-S8m" secondAttribute="top" constant="50" id="ndh-l5-gOw"/>
                                             <constraint firstItem="zwe-GS-oTU" firstAttribute="leading" secondItem="d4c-2C-S8m" secondAttribute="leading" constant="3.5" id="tS1-LL-Udo"/>
                                             <constraint firstAttribute="trailing" secondItem="s4a-0J-HNj" secondAttribute="trailing" constant="3.5" id="yLf-HI-Dv9"/>
                                         </constraints>
@@ -1050,11 +1050,11 @@
         <image name="StartButton" width="212" height="114"/>
         <image name="This" width="250" height="250"/>
         <image name="ToD" width="250" height="250"/>
-        <image name="YouChoose" width="500" height="500"/>
+        <image name="YouChoose" width="488" height="166"/>
         <image name="arrow.clockwise" catalog="system" width="115" height="128"/>
         <image name="homeButton" width="250" height="250"/>
         <image name="info.circle" catalog="system" width="128" height="121"/>
-        <image name="or" width="500" height="500"/>
+        <image name="or" width="464" height="111"/>
         <image name="seconds" width="250" height="250"/>
         <systemColor name="secondarySystemGroupedBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
