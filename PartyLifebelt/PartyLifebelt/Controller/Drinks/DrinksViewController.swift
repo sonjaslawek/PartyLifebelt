@@ -11,11 +11,11 @@ class DrinksViewController: UIViewController, Storyboarded  {
     
     weak var coordinator: MainCoordinator?
     var drink = DrinksDataClass()
+  
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setNavigationBarImage()
-       // DrinksData.shared.fetchData(test: drink)
         drink.getData {
             print("\(self.drink.drinkArray)")
         }
