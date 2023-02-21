@@ -48,6 +48,13 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = drinksTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        if indexPath.row == drink.drinkArray.count - 1 && drink.letterIndex < drink.letters.count {
+            drink.getData {
+                DispatchQueue.main.async {
+                    self.drinksTableView.reloadData()
+                }
+            }
+        }
         cell.textLabel?.text = drink.drinkArray[indexPath.row].strDrink
         cell.textLabel?.textColor = .white
         return cell
@@ -55,7 +62,6 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let selectedRow = drinksTableView.indexPathForSelectedRow else { return }
-        
         coordinator?.detailDrinksView(model: drink.drinkArray[selectedRow.row])
     }
 }
