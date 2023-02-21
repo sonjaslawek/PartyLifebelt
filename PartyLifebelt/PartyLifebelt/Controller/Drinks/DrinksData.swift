@@ -11,7 +11,6 @@ class DrinksDataClass {
     struct Returned: Codable {
         var drinks: [Drinks]
     }
-    
     var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     var letterIndex = 0
     var isFetching = false
