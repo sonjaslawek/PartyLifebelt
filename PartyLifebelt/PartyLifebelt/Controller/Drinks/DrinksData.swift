@@ -6,17 +6,12 @@
 //
 
 import Foundation
-
 class DrinksDataClass {
     
     struct Returned: Codable {
         var drinks: [Drinks]
     }
-  
-    struct Drinks: Codable {
-        var strDrink = ""
-    }
-   
+    
     var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     var letterIndex = 0
     var isFetching = false
@@ -42,15 +37,19 @@ class DrinksDataClass {
             completed()
             return
         }
-    
+        
         let session = URLSession.shared
         let task = session.dataTask(with: url) { data, response, error in
             if let error = error {
                 print("ERROR! \(error.localizedDescription)")
             }
-        
+            
             do {
-                let returned = try JSONDecoder().decode(Returned.self, from: data!)
+                guard let data = data else {
+                    return 
+                }
+                
+                let returned = try JSONDecoder().decode(Returned.self, from: data)
                 self.drinkArray += returned.drinks
             } catch {
                 print("JSON ERROR! \(error.localizedDescription)")

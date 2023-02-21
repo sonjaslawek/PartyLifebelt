@@ -16,6 +16,7 @@
 		631FF1132988176100C4CC8C /* SevenSeconds.json in Resources */ = {isa = PBXBuildFile; fileRef = 631FF1102988111500C4CC8C /* SevenSeconds.json */; };
 		631FF11529881F2A00C4CC8C /* ThisOrThat.json in Resources */ = {isa = PBXBuildFile; fileRef = 631FF11429881CC000C4CC8C /* ThisOrThat.json */; };
 		631FF11729881F4000C4CC8C /* ThisOrThatGameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 631FF11629881F4000C4CC8C /* ThisOrThatGameModel.swift */; };
+		632FA17729A4F4A200B72892 /* DetailDrinksViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 632FA17629A4F4A200B72892 /* DetailDrinksViewController.swift */; };
 		633ADE0C299C013800248AA6 /* DrinksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633ADE0B299C013800248AA6 /* DrinksData.swift */; };
 		633ADE10299D03A400248AA6 /* DrinksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633ADE0F299D03A400248AA6 /* DrinksModel.swift */; };
 		639456F0297EBCF60069B40F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639456EF297EBCF60069B40F /* AppDelegate.swift */; };
@@ -46,6 +47,7 @@
 		631FF1112988162500C4CC8C /* SevenSecondsGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SevenSecondsGameModel.swift; sourceTree = "<group>"; };
 		631FF11429881CC000C4CC8C /* ThisOrThat.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = ThisOrThat.json; sourceTree = "<group>"; };
 		631FF11629881F4000C4CC8C /* ThisOrThatGameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThisOrThatGameModel.swift; sourceTree = "<group>"; };
+		632FA17629A4F4A200B72892 /* DetailDrinksViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailDrinksViewController.swift; sourceTree = "<group>"; };
 		633ADE0B299C013800248AA6 /* DrinksData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksData.swift; sourceTree = "<group>"; };
 		633ADE0F299D03A400248AA6 /* DrinksModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinksModel.swift; sourceTree = "<group>"; };
 		639456EC297EBCF60069B40F /* PartyLifebelt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PartyLifebelt.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -107,6 +109,7 @@
 			children = (
 				639457112981B45B0069B40F /* DrinksViewController.swift */,
 				633ADE0B299C013800248AA6 /* DrinksData.swift */,
+				632FA17629A4F4A200B72892 /* DetailDrinksViewController.swift */,
 			);
 			path = Drinks;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				632FA17729A4F4A200B72892 /* DetailDrinksViewController.swift in Sources */,
 				6394571B2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift in Sources */,
 				631FF1122988162500C4CC8C /* SevenSecondsGameModel.swift in Sources */,
 				631FF11729881F4000C4CC8C /* ThisOrThatGameModel.swift in Sources */,

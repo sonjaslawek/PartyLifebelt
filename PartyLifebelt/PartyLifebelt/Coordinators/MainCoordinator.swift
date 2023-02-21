@@ -64,4 +64,12 @@ class MainCoordinator: Coordinator {
         ss.coordinator = self
         navigationController.pushViewController(ss, animated: true)
     }
+    
+    func detailDrinksView(model:Drinks) {
+        let dd = DetailDrinksViewController.instantiate()
+        dd.coordinator = self
+        dd.drink = model
+        navigationController.pushViewController(dd, animated: true)
+    }
+
 }

@@ -9,15 +9,20 @@ import UIKit
 
 class DrinksViewController: UIViewController, Storyboarded  {
     
+    @IBOutlet weak var drinksTableView: UITableView!
+    
     weak var coordinator: MainCoordinator?
     var drink = DrinksDataClass()
-  
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        drinksTableView.delegate = self
+        drinksTableView.dataSource = self
         setNavigationBarImage()
         drink.getData {
-            print("\(self.drink.drinkArray)")
+            DispatchQueue.main.async {
+                self.drinksTableView.reloadData()
+            }
         }
     }
     
@@ -31,5 +36,26 @@ class DrinksViewController: UIViewController, Storyboarded  {
     
     @objc func goTo() {
         coordinator?.start()
+    }
+}
+
+// MARK: TableView Delegate Methods
+extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return drink.drinkArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = drinksTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = drink.drinkArray[indexPath.row].strDrink
+        cell.textLabel?.textColor = .white
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let selectedRow = drinksTableView.indexPathForSelectedRow else { return }
+        
+        coordinator?.detailDrinksView(model: drink.drinkArray[selectedRow.row])
     }
 }
