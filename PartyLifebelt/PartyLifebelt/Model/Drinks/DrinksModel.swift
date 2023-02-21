@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct DrinksModel: Codable {
+struct Drinks: Codable {
     
         var strDrink = ""
         var strDrinkAlternate: String?
