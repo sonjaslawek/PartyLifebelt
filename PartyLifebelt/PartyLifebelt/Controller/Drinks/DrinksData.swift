@@ -6,17 +6,18 @@
 //
 
 import Foundation
-class DrinksDataClass {
+
+class DrinkData {
     
     struct Returned: Codable {
-        var drinks: [Drinks]
+        var drinks: [DrinkModel]
     }
     var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     var letterIndex = 0
     var isFetching = false
     
-    var baseURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f="
-    var drinkArray: [Drinks] = []
+    var baseURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+    var drinkArray: [DrinkModel] = []
     
     func getData(completed: @escaping () -> () ) {
         

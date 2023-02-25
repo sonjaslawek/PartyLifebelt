@@ -17,7 +17,8 @@ class DetailDrinksViewController: UIViewController, Storyboarded {
     @IBOutlet weak var ingredientsTextView: UITextView!
     @IBOutlet weak var recipeTextView: UITextView!
     
-    var drink = Drinks()
+    
+    var drink = DrinkModel()
 
     override func viewDidLoad() {
         super.viewDidLoad()

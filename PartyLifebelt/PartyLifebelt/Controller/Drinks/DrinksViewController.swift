@@ -10,20 +10,39 @@ import UIKit
 class DrinksViewController: UIViewController, Storyboarded  {
     
     @IBOutlet weak var drinksTableView: UITableView!
+    @IBOutlet weak var drinkSearchBar: UISearchBar!
     
     weak var coordinator: MainCoordinator?
-    var drink = DrinksDataClass()
+    var drinkAPI = DrinkData()
+    var drinkModel: [DrinkModel] = []
+    var searchBarItems: [DrinkModel] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         drinksTableView.delegate = self
         drinksTableView.dataSource = self
+        drinkSearchBar.delegate = self
         setNavigationBarImage()
-        drink.getData {
-            DispatchQueue.main.async {
-                self.drinksTableView.reloadData()
-            }
+        navigationItem.searchController?.hidesNavigationBarDuringPresentation = false
+        loadDrinks()
+        drinksTableView.tableHeaderView = drinkSearchBar
+    }
+    
+    @IBAction func alcoholOptionsSegment(_ sender: UISegmentedControl) {
+        switch sender.selectedSegmentIndex {
+        case 0:
+            print("We have present you all drinks")
+        case 1:
+            print("We have present you only alcohol drinks xd")
+        case 2:
+            print("We have present toy non-alcoholic drinks xd")
+        default:
+            print("Somethings gone wrong with segments!")
         }
+    }
+    @IBAction func randomDrinkButton(_ sender: Any) {
+        print("Random drink will be present")
+       
     }
     
     // MARK: Setting Navigation Bar
@@ -37,31 +56,93 @@ class DrinksViewController: UIViewController, Storyboarded  {
     @objc func goTo() {
         coordinator?.start()
     }
+    
+    func loadDrinks() {
+        drinkAPI.getData {
+            DispatchQueue.main.async {
+                self.drinkModel = self.drinkAPI.drinkArray
+                self.drinksTableView.reloadData()
+            }
+        }
+        drinksTableView.reloadData()
+    }
 }
 
 // MARK: TableView Delegate Methods
 extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drink.drinkArray.count
+        return drinkModel.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.rowHeight = 60
         let cell = drinksTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        if indexPath.row == drink.drinkArray.count - 1 && drink.letterIndex < drink.letters.count {
-            drink.getData {
-                DispatchQueue.main.async {
-                    self.drinksTableView.reloadData()
-                }
-            }
+        if indexPath.row == drinkModel.count - 1 && drinkAPI.letterIndex < drinkAPI.letters.count {
+            loadDrinks()
         }
-        cell.textLabel?.text = drink.drinkArray[indexPath.row].strDrink
+        cell.textLabel?.text = drinkModel[indexPath.row].strDrink
         cell.textLabel?.textColor = .white
+        guard let url = URL(string: drinkModel[indexPath.row].strDrinkThumb ?? "" ) else {return cell}
+        do {
+            let data = try Data(contentsOf: url)
+            cell.imageView?.image = UIImage(data: data)
+        } catch {
+            print("ERROR! rouble with image url in cell properties \(url)")
+        }
+        
         return cell
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let selectedRow = drinksTableView.indexPathForSelectedRow else { return }
-        coordinator?.detailDrinksView(model: drink.drinkArray[selectedRow.row])
+        coordinator?.detailDrinksView(model: drinkAPI.drinkArray[selectedRow.row])
     }
 }
+//MARK: search Bar Controller Methods
+extension DrinksViewController: UISearchBarDelegate {
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        if searchBar.text?.count == 0 {
+            loadDrinks()
+            
+            DispatchQueue.main.async {
+                searchBar.resignFirstResponder()
+            }
+        }
+        
+        filterContentForSearchText(searchText)
+        drinksTableView.reloadData()
+    }
+    
+    func filterContentForSearchText(_ searchText: String) {
+        
+        searchBarItems = drinkModel.filter { drink in
+            let drinkTitleMatches = drink.strDrink.range(of: searchText, options: .caseInsensitive) != nil
+            let ingredientMatches = [
+                drink.strIngredient1,
+                drink.strIngredient2,
+                drink.strIngredient3,
+                drink.strIngredient4,
+                drink.strIngredient5,
+                drink.strIngredient6,
+                drink.strIngredient7,
+                drink.strIngredient8,
+                drink.strIngredient9,
+                drink.strIngredient10,
+                drink.strIngredient11,
+                drink.strIngredient12,
+                drink.strIngredient13,
+                drink.strIngredient14,
+                drink.strIngredient15
+            ].compactMap { $0 }
+                .contains { ingredient in
+                    ingredient.range(of: searchText, options: .caseInsensitive) != nil
+                }
+            return drinkTitleMatches
+        }
+        
+        self.drinkModel = searchBarItems
+    }
+}
+
