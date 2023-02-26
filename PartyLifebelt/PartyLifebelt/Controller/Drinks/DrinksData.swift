@@ -6,20 +6,22 @@
 //
 
 import Foundation
-class DrinksDataClass {
+
+class DrinkData {
     
     struct Returned: Codable {
-        var drinks: [Drinks]
+        var drinks: [DrinkModel]
     }
+    
     var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     var letterIndex = 0
     var isFetching = false
+    var searchText = ""
+    var baseURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
+    var drinkArray: [DrinkModel] = []
     
-    var baseURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f="
-    var drinkArray: [Drinks] = []
-    
-    func getData(completed: @escaping () -> () ) {
-        
+    func getAllData(completed: @escaping () -> () ) {
+            
         guard !isFetching else {
             print("ERROR! We hadn't fetch data")
             completed()
@@ -27,7 +29,9 @@ class DrinksDataClass {
         }
         isFetching = true
         
-        let urlString = baseURL + letters[letterIndex]
+        for letter in letters {
+        
+        let urlString = "https://www.thecocktaildb.com/api/json/v1/1/search.php?f=" + letters[letterIndex]
         print("Succes! URL is \(urlString)")
         letterIndex += 1
         guard let url = URL(string: urlString) else {
@@ -57,5 +61,9 @@ class DrinksDataClass {
             self.isFetching = false
         }
         task.resume()
+        }
+        self.drinkArray.sorted(by: {$0.strDrink < $1.strDrink})
+        letterIndex = 0
     }
+  
 }
