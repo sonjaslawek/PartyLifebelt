@@ -17,6 +17,7 @@ class DrinksViewController: UIViewController, Storyboarded  {
     var drinkModel: [DrinkModel] = []
     var searchBarItems: [DrinkModel] = []
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         drinksTableView.delegate = self
@@ -31,6 +32,7 @@ class DrinksViewController: UIViewController, Storyboarded  {
     @IBAction func alcoholOptionsSegment(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
+            loadDrinks()
             print("We have present you all drinks")
         case 1:
             print("We have present you only alcohol drinks xd")
@@ -42,7 +44,6 @@ class DrinksViewController: UIViewController, Storyboarded  {
     }
     @IBAction func randomDrinkButton(_ sender: Any) {
         print("Random drink will be present")
-       
     }
     
     // MARK: Setting Navigation Bar
@@ -58,13 +59,16 @@ class DrinksViewController: UIViewController, Storyboarded  {
     }
     
     func loadDrinks() {
-        drinkAPI.getData {
+        
+        drinkAPI.getAllData {
             DispatchQueue.main.async {
                 self.drinkModel = self.drinkAPI.drinkArray
+                self.searchBarItems = self.drinkModel
+                let sort = self.searchBarItems.sorted(by: {$0.strDrink < $1.strDrink})
+                self.searchBarItems = sort
                 self.drinksTableView.reloadData()
             }
         }
-        drinksTableView.reloadData()
     }
 }
 
@@ -72,18 +76,17 @@ class DrinksViewController: UIViewController, Storyboarded  {
 extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return drinkModel.count
+        return self.searchBarItems.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
         tableView.rowHeight = 60
         let cell = drinksTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        if indexPath.row == drinkModel.count - 1 && drinkAPI.letterIndex < drinkAPI.letters.count {
-            loadDrinks()
-        }
-        cell.textLabel?.text = drinkModel[indexPath.row].strDrink
+       // let sortedSearchItems = searchBarItems.sorted(by: {$0.strDrink < $1.strDrink})
+        cell.textLabel?.text = searchBarItems[indexPath.row].strDrink
         cell.textLabel?.textColor = .white
-        guard let url = URL(string: drinkModel[indexPath.row].strDrinkThumb ?? "" ) else {return cell}
+        guard let url = URL(string: searchBarItems[indexPath.row].strDrinkThumb ?? "" ) else {return cell}
         do {
             let data = try Data(contentsOf: url)
             cell.imageView?.image = UIImage(data: data)
@@ -95,24 +98,22 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         guard let selectedRow = drinksTableView.indexPathForSelectedRow else { return }
-        coordinator?.detailDrinksView(model: drinkAPI.drinkArray[selectedRow.row])
+        coordinator?.detailDrinksView(model: searchBarItems[selectedRow.row])
     }
 }
-//MARK: search Bar Controller Methods
+//MARK: Search Bar Controller Methods
 extension DrinksViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        if searchBar.text?.count == 0 {
-            loadDrinks()
-            
-            DispatchQueue.main.async {
-                searchBar.resignFirstResponder()
-            }
+        if searchText != "" {
+            filterContentForSearchText(searchText)
+            drinksTableView.reloadData()
+        } else {
+            self.searchBarItems = drinkModel
+            drinksTableView.reloadData()
         }
-        
-        filterContentForSearchText(searchText)
-        drinksTableView.reloadData()
     }
     
     func filterContentForSearchText(_ searchText: String) {
@@ -139,10 +140,14 @@ extension DrinksViewController: UISearchBarDelegate {
                 .contains { ingredient in
                     ingredient.range(of: searchText, options: .caseInsensitive) != nil
                 }
-            return drinkTitleMatches
+            return drinkTitleMatches || ingredientMatches
         }
+        //self.drinkModel = searchBarItems
         
-        self.drinkModel = searchBarItems
+        if drinkModel.count == 0 {
+            loadDrinks()
+        }
+        print("dddd \(drinkModel.count)")
     }
 }
 
