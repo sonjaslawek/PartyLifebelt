@@ -54,6 +54,7 @@ class DrinkData {
                 
                 let returned = try JSONDecoder().decode(Returned.self, from: data)
                 self.drinkArray += returned.drinks
+                self.drinkArray = self.drinkArray.sorted(by: {$0.strDrink < $1.strDrink})
             } catch {
                 print("JSON ERROR! \(error.localizedDescription)")
             }
@@ -62,8 +63,6 @@ class DrinkData {
         }
         task.resume()
         }
-        self.drinkArray.sorted(by: {$0.strDrink < $1.strDrink})
         letterIndex = 0
     }
-  
 }

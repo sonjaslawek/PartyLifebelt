@@ -32,17 +32,23 @@ class DrinksViewController: UIViewController, Storyboarded  {
     @IBAction func alcoholOptionsSegment(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
         case 0:
-            loadDrinks()
-            print("We have present you all drinks")
+            searchBarItems = drinkModel.sorted(by: {$0.strDrink < $1.strDrink})
+            drinksTableView.reloadData()
         case 1:
-            print("We have present you only alcohol drinks xd")
+            searchBarItems = drinkModel.filter {$0.strAlcoholic == "Alcoholic"}
+            searchBarItems = searchBarItems.sorted(by: {$0.strDrink < $1.strDrink})
+            drinksTableView.reloadData()
         case 2:
-            print("We have present toy non-alcoholic drinks xd")
+            searchBarItems = drinkModel.filter {$0.strAlcoholic == "Non alcoholic"}
+            searchBarItems = searchBarItems.sorted(by: {$0.strDrink < $1.strDrink})
+            drinksTableView.reloadData()
         default:
             print("Somethings gone wrong with segments!")
         }
     }
     @IBAction func randomDrinkButton(_ sender: Any) {
+        guard let randomDrink = searchBarItems.randomElement() else { return }
+        coordinator?.detailDrinksView(model: randomDrink)
         print("Random drink will be present")
     }
     
@@ -59,13 +65,10 @@ class DrinksViewController: UIViewController, Storyboarded  {
     }
     
     func loadDrinks() {
-        
         drinkAPI.getAllData {
             DispatchQueue.main.async {
-                self.drinkModel = self.drinkAPI.drinkArray
-                self.searchBarItems = self.drinkModel
-                let sort = self.searchBarItems.sorted(by: {$0.strDrink < $1.strDrink})
-                self.searchBarItems = sort
+               self.drinkModel = self.drinkAPI.drinkArray
+                self.searchBarItems = self.drinkModel//.sorted(by: {$0.strDrink < $1.strDrink})
                 self.drinksTableView.reloadData()
             }
         }
@@ -80,10 +83,8 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
         tableView.rowHeight = 60
         let cell = drinksTableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-       // let sortedSearchItems = searchBarItems.sorted(by: {$0.strDrink < $1.strDrink})
         cell.textLabel?.text = searchBarItems[indexPath.row].strDrink
         cell.textLabel?.textColor = .white
         guard let url = URL(string: searchBarItems[indexPath.row].strDrinkThumb ?? "" ) else {return cell}
@@ -142,12 +143,10 @@ extension DrinksViewController: UISearchBarDelegate {
                 }
             return drinkTitleMatches || ingredientMatches
         }
-        //self.drinkModel = searchBarItems
         
         if drinkModel.count == 0 {
             loadDrinks()
         }
-        print("dddd \(drinkModel.count)")
     }
 }
 
