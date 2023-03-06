@@ -314,22 +314,22 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vGE-bS-865">
-                                                <rect key="frame" x="61" y="49" width="215" height="182"/>
+                                                <rect key="frame" x="46" y="37" width="245" height="212"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" constant="215" id="gir-Rd-rYM"/>
-                                                    <constraint firstAttribute="height" constant="182" id="m9W-9b-dkf"/>
+                                                    <constraint firstAttribute="width" constant="245" id="gir-Rd-rYM"/>
+                                                    <constraint firstAttribute="height" constant="212" id="m9W-9b-dkf"/>
                                                 </constraints>
                                             </imageView>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemGray2Color"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="bottom" secondItem="GN5-Ui-Rmu" secondAttribute="bottom" constant="218" id="8Bm-Iv-JzZ"/>
                                             <constraint firstItem="GN5-Ui-Rmu" firstAttribute="top" secondItem="df3-Bz-ytx" secondAttribute="top" constant="8" id="E7F-Xk-fSb"/>
                                             <constraint firstItem="GN5-Ui-Rmu" firstAttribute="leading" secondItem="df3-Bz-ytx" secondAttribute="leading" id="FH7-dp-bW7"/>
                                             <constraint firstAttribute="trailing" secondItem="GN5-Ui-Rmu" secondAttribute="trailing" id="Yus-GY-t84"/>
-                                            <constraint firstItem="vGE-bS-865" firstAttribute="top" secondItem="GN5-Ui-Rmu" secondAttribute="bottom" constant="18" id="vLh-qv-kWC"/>
+                                            <constraint firstItem="vGE-bS-865" firstAttribute="top" secondItem="GN5-Ui-Rmu" secondAttribute="bottom" constant="6" id="vLh-qv-kWC"/>
                                             <constraint firstItem="vGE-bS-865" firstAttribute="centerX" secondItem="df3-Bz-ytx" secondAttribute="centerX" id="wXy-Kk-tOg"/>
-                                            <constraint firstItem="vGE-bS-865" firstAttribute="centerY" secondItem="df3-Bz-ytx" secondAttribute="centerY" constant="15.5" id="wnr-e9-b7q"/>
+                                            <constraint firstItem="vGE-bS-865" firstAttribute="centerY" secondItem="df3-Bz-ytx" secondAttribute="centerY" constant="18.5" id="wnr-e9-b7q"/>
                                         </constraints>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="M2E-7k-gGv" userLabel="DetailsView">
@@ -359,7 +359,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="Fg0-FU-6VN" firstAttribute="centerX" secondItem="OqS-rd-vSq" secondAttribute="centerX" constant="5" id="5ym-aH-siV"/>
                                                     <constraint firstItem="Tse-ai-Ikp" firstAttribute="top" secondItem="OqS-rd-vSq" secondAttribute="top" constant="6.5" id="G6f-kJ-QBi"/>
@@ -388,7 +388,7 @@
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemMintColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstAttribute="trailing" secondItem="hoU-fS-Asj" secondAttribute="trailing" constant="5" id="0LP-BF-dwF"/>
                                                     <constraint firstAttribute="bottom" secondItem="hoU-fS-Asj" secondAttribute="bottom" constant="8" id="CKU-5V-7Qu"/>
@@ -418,7 +418,7 @@
                                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                     </textView>
                                                 </subviews>
-                                                <color key="backgroundColor" systemColor="systemOrangeColor"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
                                                     <constraint firstItem="KHl-N4-5SX" firstAttribute="leading" secondItem="r5n-8m-aIK" secondAttribute="leading" constant="6" id="CD8-Gb-uUO"/>
                                                     <constraint firstItem="8HL-OG-SYD" firstAttribute="leading" secondItem="r5n-8m-aIK" secondAttribute="leading" constant="8" id="JMH-bn-3mU"/>
@@ -430,7 +430,7 @@
                                                 </constraints>
                                             </view>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstItem="OqS-rd-vSq" firstAttribute="top" secondItem="M2E-7k-gGv" secondAttribute="top" constant="8" id="0Js-ls-Df1"/>
                                             <constraint firstAttribute="bottom" secondItem="r5n-8m-aIK" secondAttribute="bottom" constant="8" id="2DS-tq-9Zc"/>
@@ -445,7 +445,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="df3-Bz-ytx" firstAttribute="leading" secondItem="FB5-aI-0lk" secondAttribute="leading" id="ChA-4z-JMz"/>
                                     <constraint firstAttribute="bottom" secondItem="M2E-7k-gGv" secondAttribute="bottom" id="MXe-Kb-5YY"/>
@@ -1420,12 +1420,6 @@
         <systemColor name="systemBlueColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="systemBrownColor">
-            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemGray2Color">
-            <color red="0.68235294117647061" green="0.68235294117647061" blue="0.69803921568627447" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemGray6Color">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
@@ -1437,15 +1431,6 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemMintColor">
-            <color red="0.0" green="0.7803921568627451" blue="0.74509803921568629" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemOrangeColor">
-            <color red="1" green="0.58431372549019611" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
-        <systemColor name="systemPurpleColor">
-            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
