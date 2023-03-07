@@ -188,64 +188,33 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YNq-4L-dSU" userLabel="CenterView">
                                         <rect key="frame" x="12" y="80" width="319" height="463"/>
                                         <subviews>
-                                            <searchBar clipsSubviews="YES" contentMode="redraw" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lg3-vr-EAl">
-                                                <rect key="frame" x="16" y="8" width="287" height="51"/>
-                                                <color key="barTintColor" red="0.086274512110000007" green="0.086274512110000007" blue="0.086274512110000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                <textInputTraits key="textInputTraits"/>
-                                                <scopeButtonTitles>
-                                                    <string>Title</string>
-                                                    <string>Title</string>
-                                                </scopeButtonTitles>
-                                            </searchBar>
-                                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oy8-Hc-KNt">
-                                                <rect key="frame" x="12" y="81" width="295" height="374"/>
-                                                <subviews>
-                                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="12m-sF-bjy">
-                                                        <rect key="frame" x="0.0" y="0.0" width="295" height="374"/>
-                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="separatorColor" red="0.086274512110000007" green="0.086274512110000007" blue="0.086274512110000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                                        <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <prototypes>
-                                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="50" id="Iak-Xe-h7I">
-                                                                <rect key="frame" x="0.0" y="44.5" width="295" height="50"/>
-                                                                <autoresizingMask key="autoresizingMask"/>
-                                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iak-Xe-h7I" id="yQW-l3-mjw">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
-                                                                    <autoresizingMask key="autoresizingMask"/>
-                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                                </tableViewCellContentView>
-                                                                <color key="backgroundColor" systemColor="systemGreenColor"/>
-                                                            </tableViewCell>
-                                                        </prototypes>
-                                                    </tableView>
-                                                </subviews>
-                                                <constraints>
-                                                    <constraint firstAttribute="trailing" secondItem="12m-sF-bjy" secondAttribute="trailing" id="6pK-Cl-gY4"/>
-                                                    <constraint firstItem="1qv-mz-jhK" firstAttribute="trailing" secondItem="12m-sF-bjy" secondAttribute="trailing" id="9P3-PY-Qrm"/>
-                                                    <constraint firstAttribute="width" constant="295" id="Dyf-oZ-PF0"/>
-                                                    <constraint firstAttribute="bottom" secondItem="12m-sF-bjy" secondAttribute="bottom" id="Piv-oS-avn"/>
-                                                    <constraint firstItem="1qv-mz-jhK" firstAttribute="bottom" secondItem="12m-sF-bjy" secondAttribute="bottom" id="WyL-R6-XRT"/>
-                                                    <constraint firstAttribute="height" constant="374" id="dQ3-j3-gol"/>
-                                                    <constraint firstItem="12m-sF-bjy" firstAttribute="leading" secondItem="1qv-mz-jhK" secondAttribute="leading" id="k3E-nq-nQR"/>
-                                                    <constraint firstItem="12m-sF-bjy" firstAttribute="top" secondItem="1qv-mz-jhK" secondAttribute="top" id="nRE-Z0-Vxd"/>
-                                                </constraints>
-                                                <viewLayoutGuide key="contentLayoutGuide" id="tbr-FK-2bC"/>
-                                                <viewLayoutGuide key="frameLayoutGuide" id="1qv-mz-jhK"/>
-                                            </scrollView>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="12m-sF-bjy">
+                                                <rect key="frame" x="12" y="0.0" width="295" height="456"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="separatorColor" red="0.086274512110000007" green="0.086274512110000007" blue="0.086274512110000007" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="sectionIndexColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="50" id="Iak-Xe-h7I">
+                                                        <rect key="frame" x="0.0" y="44.5" width="295" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Iak-Xe-h7I" id="yQW-l3-mjw">
+                                                            <rect key="frame" x="0.0" y="0.0" width="295" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        </tableViewCellContentView>
+                                                        <color key="backgroundColor" systemColor="systemGreenColor"/>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                            </tableView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemYellowColor"/>
                                         <constraints>
-                                            <constraint firstItem="Lg3-vr-EAl" firstAttribute="top" secondItem="YNq-4L-dSU" secondAttribute="top" constant="8" id="1CU-AR-QP2"/>
-                                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="oy8-Hc-KNt" secondAttribute="trailing" constant="12" id="4vt-1x-qQF"/>
-                                            <constraint firstAttribute="trailing" secondItem="Lg3-vr-EAl" secondAttribute="trailing" constant="16" id="BLH-sF-pvg"/>
-                                            <constraint firstItem="oy8-Hc-KNt" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="YNq-4L-dSU" secondAttribute="leading" constant="12" id="Qgb-58-QVa"/>
-                                            <constraint firstItem="Lg3-vr-EAl" firstAttribute="leading" secondItem="YNq-4L-dSU" secondAttribute="leading" constant="16" id="ZQz-Zu-qoJ"/>
-                                            <constraint firstItem="oy8-Hc-KNt" firstAttribute="centerX" relation="lessThanOrEqual" secondItem="Lg3-vr-EAl" secondAttribute="centerX" priority="999" id="h5K-mo-9yM"/>
-                                            <constraint firstItem="oy8-Hc-KNt" firstAttribute="top" secondItem="Lg3-vr-EAl" secondAttribute="bottom" constant="22" id="oL1-7R-eCc"/>
-                                            <constraint firstItem="oy8-Hc-KNt" firstAttribute="bottom" secondItem="YNq-4L-dSU" secondAttribute="bottomMargin" id="qBA-AX-ex7"/>
-                                            <constraint firstItem="Lg3-vr-EAl" firstAttribute="centerX" secondItem="YNq-4L-dSU" secondAttribute="centerX" id="vWw-Ki-5JH"/>
+                                            <constraint firstItem="12m-sF-bjy" firstAttribute="top" secondItem="YNq-4L-dSU" secondAttribute="top" id="5aX-59-8wJ"/>
+                                            <constraint firstAttribute="bottom" secondItem="12m-sF-bjy" secondAttribute="bottom" constant="7" id="Do7-F5-Ey8"/>
+                                            <constraint firstItem="12m-sF-bjy" firstAttribute="leading" secondItem="YNq-4L-dSU" secondAttribute="leading" constant="12" id="gtE-gg-p3e"/>
+                                            <constraint firstItem="12m-sF-bjy" firstAttribute="centerX" secondItem="YNq-4L-dSU" secondAttribute="centerX" id="kCs-S3-pvd"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -278,11 +247,11 @@
                             <constraint firstItem="jQC-yX-sCa" firstAttribute="top" secondItem="uZN-hI-RWT" secondAttribute="topMargin" id="jYP-lu-a7Z"/>
                         </constraints>
                     </view>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
                     <navigationItem key="navigationItem" id="gxg-Wy-QWO">
                         <barButtonItem key="backBarButtonItem" title=" " id="qdd-Vh-BFp"/>
                     </navigationItem>
                     <connections>
-                        <outlet property="drinkSearchBar" destination="Lg3-vr-EAl" id="YqW-Hx-GnO"/>
                         <outlet property="drinksTableView" destination="12m-sF-bjy" id="xmq-Wh-IH8"/>
                     </connections>
                 </viewController>
