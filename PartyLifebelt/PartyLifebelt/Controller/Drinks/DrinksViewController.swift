@@ -7,27 +7,39 @@
 
 import UIKit
 
-class DrinksViewController: UIViewController, Storyboarded  {
-    
+class DrinksViewController: UIViewController, UISearchResultsUpdating, Storyboarded  {
+
     @IBOutlet weak var drinksTableView: UITableView!
-    @IBOutlet weak var drinkSearchBar: UISearchBar!
+    let searchController = UISearchController(searchResultsController: nil)
+    var searchBarBottomConstraint: NSLayoutConstraint!
     
     weak var coordinator: MainCoordinator?
     var drinkAPI = DrinkData()
     var drinkModel: [DrinkModel] = []
     var searchBarItems: [DrinkModel] = []
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         drinksTableView.delegate = self
         drinksTableView.dataSource = self
-        drinkSearchBar.delegate = self
+        configureSearchController()
         setNavigationBarImage()
-        navigationItem.searchController?.hidesNavigationBarDuringPresentation = false
         loadDrinks()
-        drinksTableView.tableHeaderView = drinkSearchBar
     }
+    
+    func configureSearchController() {
+        searchController.searchResultsUpdater = self
+        self.searchController.hidesNavigationBarDuringPresentation = false
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Find your drinks!"
+        //navigationItem.searchController = searchController
+        definesPresentationContext = true
+        searchController.searchBar.sizeToFit()
+        searchController.searchBar.backgroundColor = .black
+        searchController.searchBar.barTintColor = .black
+        self.drinksTableView.tableHeaderView = searchController.searchBar
+        automaticallyAdjustsScrollViewInsets = false
+        }
     
     @IBAction func alcoholOptionsSegment(_ sender: UISegmentedControl) {
         switch sender.selectedSegmentIndex {
@@ -46,6 +58,7 @@ class DrinksViewController: UIViewController, Storyboarded  {
             print("Somethings gone wrong with segments!")
         }
     }
+    
     @IBAction func randomDrinkButton(_ sender: Any) {
         guard let randomDrink = searchBarItems.randomElement() else { return }
         coordinator?.detailDrinksView(model: randomDrink)
@@ -105,9 +118,12 @@ extension DrinksViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 //MARK: Search Bar Controller Methods
+
 extension DrinksViewController: UISearchBarDelegate {
-    
-    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+    func updateSearchResults(for searchController: UISearchController) {
+        guard let searchText = searchController.searchBar.text else {
+            return
+        }
         if searchText != "" {
             filterContentForSearchText(searchText)
             drinksTableView.reloadData()
