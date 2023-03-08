@@ -32,11 +32,10 @@ class DrinksViewController: UIViewController, UISearchResultsUpdating, Storyboar
         self.searchController.hidesNavigationBarDuringPresentation = false
         searchController.obscuresBackgroundDuringPresentation = false
         searchController.searchBar.placeholder = "Find your drinks!"
-        //navigationItem.searchController = searchController
         definesPresentationContext = true
         searchController.searchBar.sizeToFit()
-        searchController.searchBar.backgroundColor = .black
-        searchController.searchBar.barTintColor = .black
+        searchController.searchBar.backgroundColor = .clear
+        searchController.searchBar.barTintColor = .clear
         self.drinksTableView.tableHeaderView = searchController.searchBar
         automaticallyAdjustsScrollViewInsets = false
         }
