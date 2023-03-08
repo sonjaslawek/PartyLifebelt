@@ -4,5 +4,6 @@ target 'PartyLifebelt' do
 
   # Pods for PartyLifebelt
 pod 'AMPopTip'
+pod "AMTooltip"
 
 end

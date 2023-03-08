@@ -7,19 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		04125E7C7AD74D2A299D17BAC418E844 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		35182F0A255EE8DB751B913A3D85B3E4 /* PopTip+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DB2E1C78AFB7345CEE36E5B31CDB8D1F /* PopTip+Transitions.swift */; };
-		3E9737DEE7A16B02C7F808239AF99C94 /* AMPopTip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CA2639884B88B9DC5AC2BD0063403D99 /* AMPopTip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		612CB9595F224F3D6CFF7A58F9C0A7CC /* Pods-PartyLifebelt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C7CEF2DC7A22233571F8DB3556B4F8 /* Pods-PartyLifebelt-dummy.m */; };
-		8134506050F9ECF5AA0F64BC8971F84D /* AMPopTip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F1ACF272F403AE1D2B58369C1D4DB8B7 /* AMPopTip-dummy.m */; };
-		9ED5410B5184F1ACEB0CEE1979F469B5 /* Pods-PartyLifebelt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2FFC6B769FFA153CF46EEEE065B0645 /* Pods-PartyLifebelt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		A45B261CD47CEE5CAA771CC63F2685F7 /* PopTip+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34A67707400407EB4CDB4AF6CB5D203 /* PopTip+Draw.swift */; };
-		E3947B1F2C052B2181B8B61077655B11 /* PopTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A1B4AA83D16FE582FB75421EB32AA9B /* PopTip.swift */; };
+		073A1F551A9BE56AA4C8A7D58263E7B7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		180EECCAE2DABA987528F7A1BF0E16C1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		1EC4A021ECA9538418171D98669E5FE5 /* Pods-PartyLifebelt-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 06C7CEF2DC7A22233571F8DB3556B4F8 /* Pods-PartyLifebelt-dummy.m */; };
+		35182F0A255EE8DB751B913A3D85B3E4 /* PopTip+Transitions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3C38A5C754BBC0153DE22EFFB4261F /* PopTip+Transitions.swift */; };
+		3E9737DEE7A16B02C7F808239AF99C94 /* AMPopTip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 281C1368178CA282F7D20C3699D34DBC /* AMPopTip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7450CF68E33CAF9D30D79AC1BEA1B5D2 /* AMTooltipView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC5B74A4D987B96950B4BA9B9A0ACFE4 /* AMTooltipView.xib */; };
+		8134506050F9ECF5AA0F64BC8971F84D /* AMPopTip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = EC952B89FB6D9C14CE69C4958DD302D4 /* AMPopTip-dummy.m */; };
+		84C47B79805D94D07EDC17DA24DDFF36 /* AMTooltip-AMTooltip in Resources */ = {isa = PBXBuildFile; fileRef = 3960A88C042C307187634FE124161D9A /* AMTooltip-AMTooltip */; };
+		9D7B9D7D26AD8F837866E081BC83B450 /* AMTooltipView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08DCFAC210BE65D6C55FA6054462E48B /* AMTooltipView.swift */; };
+		A45B261CD47CEE5CAA771CC63F2685F7 /* PopTip+Draw.swift in Sources */ = {isa = PBXBuildFile; fileRef = 222F90BB254F7457F798AA78FE92C4DF /* PopTip+Draw.swift */; };
+		CF4AD5DAA1238D3F1805EFAF7CB83F6D /* Pods-PartyLifebelt-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = F2FFC6B769FFA153CF46EEEE065B0645 /* Pods-PartyLifebelt-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CFF3536346D5E7F45C8D5BF86E88B0A4 /* AMTooltip-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B9A5FF15A8C5268295D75C409BAEC921 /* AMTooltip-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E3947B1F2C052B2181B8B61077655B11 /* PopTip.swift in Sources */ = {isa = PBXBuildFile; fileRef = A78B801260912B1A8B598C6300D145F1 /* PopTip.swift */; };
 		EF51859B1BC3AD49E1478FAB5457064D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		F631AD43773CD65620E8BA03447CA7E9 /* AMTooltip-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 616B22B82DE9A09744813A24EF8CB5DC /* AMTooltip-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3F496B5360D6EECC6434F528D7850E98 /* PBXContainerItemProxy */ = {
+		55878D8B6562337C20A627145ED5D8EE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E34B6117A19FD7BE1CCFD8DFA2938CFD;
+			remoteInfo = "AMTooltip-AMTooltip";
+		};
+		68D09EFAD3F8F0F04D12C5492EEFC10A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D8F221E2DF7F004A8549777CB903E6C4;
+			remoteInfo = AMTooltip;
+		};
+		DD10C4F06D79F14C7B0BDC921E6D07C2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -30,31 +50,59 @@
 
 /* Begin PBXFileReference section */
 		06C7CEF2DC7A22233571F8DB3556B4F8 /* Pods-PartyLifebelt-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PartyLifebelt-dummy.m"; sourceTree = "<group>"; };
+		08DCFAC210BE65D6C55FA6054462E48B /* AMTooltipView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AMTooltipView.swift; path = AMTooltip/Classes/AMTooltipView.swift; sourceTree = "<group>"; };
 		09987E05BF4D4347769D03B431D4E278 /* Pods-PartyLifebelt */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-PartyLifebelt"; path = Pods_PartyLifebelt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		147FD80B7EDB120CCF41D8FFFFA74252 /* AMPopTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMPopTip.debug.xcconfig; sourceTree = "<group>"; };
-		2A1B4AA83D16FE582FB75421EB32AA9B /* PopTip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopTip.swift; path = Source/PopTip.swift; sourceTree = "<group>"; };
+		0E3E0AF5A8ADE7671BF9DE949204CFC7 /* AMTooltip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMTooltip.release.xcconfig; sourceTree = "<group>"; };
+		19A9FA4D9CC3A14C7F95B4534FB581A4 /* AMPopTip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMPopTip-prefix.pch"; sourceTree = "<group>"; };
+		222F90BB254F7457F798AA78FE92C4DF /* PopTip+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopTip+Draw.swift"; path = "Source/PopTip+Draw.swift"; sourceTree = "<group>"; };
+		281C1368178CA282F7D20C3699D34DBC /* AMPopTip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMPopTip-umbrella.h"; sourceTree = "<group>"; };
+		29DD5F3FE4D4E5CA58D599F40DF0ED09 /* AMPopTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMPopTip.release.xcconfig; sourceTree = "<group>"; };
+		3960A88C042C307187634FE124161D9A /* AMTooltip-AMTooltip */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = "AMTooltip-AMTooltip"; path = AMTooltip.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A51E52A98AECA10BFB7FB1708EFAEA1 /* AMTooltip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMTooltip-prefix.pch"; sourceTree = "<group>"; };
 		44AE15C21186FB6B828011B64DBF09F3 /* Pods-PartyLifebelt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartyLifebelt.debug.xcconfig"; sourceTree = "<group>"; };
+		47B3F9D19686592219F475571C6E7BD0 /* AMTooltip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AMTooltip-Info.plist"; sourceTree = "<group>"; };
 		5654AB18CFE2308189869708BDD801CC /* Pods-PartyLifebelt-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartyLifebelt-Info.plist"; sourceTree = "<group>"; };
-		64CFDA21329FEEA6035C650EA931EE18 /* AMPopTip.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMPopTip.release.xcconfig; sourceTree = "<group>"; };
+		5B3C38A5C754BBC0153DE22EFFB4261F /* PopTip+Transitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopTip+Transitions.swift"; path = "Source/PopTip+Transitions.swift"; sourceTree = "<group>"; };
+		616B22B82DE9A09744813A24EF8CB5DC /* AMTooltip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AMTooltip-dummy.m"; sourceTree = "<group>"; };
+		621518B532F623EFB7E0B50EABEBB055 /* AMPopTip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AMPopTip-Info.plist"; sourceTree = "<group>"; };
+		6DB909E04D1DE39219A6650F35E906B9 /* AMPopTip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AMPopTip.modulemap; sourceTree = "<group>"; };
+		72ADD8DD7681EBCD59EAA68C68B4AD5C /* AMTooltip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AMTooltip.modulemap; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		793A4E60BADBE51E3FC88A1D16B031D0 /* Pods-PartyLifebelt-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PartyLifebelt-acknowledgements.plist"; sourceTree = "<group>"; };
-		7E6382AA123E94E98E8937A5C14D5239 /* AMPopTip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "AMPopTip-Info.plist"; sourceTree = "<group>"; };
+		7CC02D399E607D94078A480C906044C4 /* ResourceBundle-AMTooltip-AMTooltip-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-AMTooltip-AMTooltip-Info.plist"; sourceTree = "<group>"; };
 		86B914B6CEC3D560781A0DE68A1173AD /* Pods-PartyLifebelt-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PartyLifebelt-frameworks.sh"; sourceTree = "<group>"; };
+		8C120E7531655555A9E58B7E271D4C32 /* AMTooltip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMTooltip.debug.xcconfig; sourceTree = "<group>"; };
 		8C95D72193B8B0961AE8D60FA1D3F419 /* AMPopTip */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AMPopTip; path = AMPopTip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		8D30BDCF9AC3B9E4193D2AF0969020D0 /* AMPopTip-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMPopTip-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A5E60001BAABB41A6431E160722066C2 /* Pods-PartyLifebelt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PartyLifebelt.release.xcconfig"; sourceTree = "<group>"; };
-		C7305947C25B0D3D728D0CC90400C505 /* AMPopTip.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = AMPopTip.modulemap; sourceTree = "<group>"; };
-		CA2639884B88B9DC5AC2BD0063403D99 /* AMPopTip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMPopTip-umbrella.h"; sourceTree = "<group>"; };
+		A78B801260912B1A8B598C6300D145F1 /* PopTip.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PopTip.swift; path = Source/PopTip.swift; sourceTree = "<group>"; };
+		B9A5FF15A8C5268295D75C409BAEC921 /* AMTooltip-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AMTooltip-umbrella.h"; sourceTree = "<group>"; };
 		CC1926ABD1F714C35440A5412CBB23E9 /* Pods-PartyLifebelt-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PartyLifebelt-acknowledgements.markdown"; sourceTree = "<group>"; };
-		D34A67707400407EB4CDB4AF6CB5D203 /* PopTip+Draw.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopTip+Draw.swift"; path = "Source/PopTip+Draw.swift"; sourceTree = "<group>"; };
-		DB2E1C78AFB7345CEE36E5B31CDB8D1F /* PopTip+Transitions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "PopTip+Transitions.swift"; path = "Source/PopTip+Transitions.swift"; sourceTree = "<group>"; };
-		F1ACF272F403AE1D2B58369C1D4DB8B7 /* AMPopTip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AMPopTip-dummy.m"; sourceTree = "<group>"; };
+		DC5B74A4D987B96950B4BA9B9A0ACFE4 /* AMTooltipView.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; name = AMTooltipView.xib; path = AMTooltip/Assets/AMTooltipView.xib; sourceTree = "<group>"; };
+		DC8054FEA66F7AC5E72E297A3E7124B6 /* AMTooltip */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AMTooltip; path = AMTooltip.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC952B89FB6D9C14CE69C4958DD302D4 /* AMPopTip-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AMPopTip-dummy.m"; sourceTree = "<group>"; };
+		ECD84D74A3F949C12DFDDD1E0B18E836 /* AMPopTip.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AMPopTip.debug.xcconfig; sourceTree = "<group>"; };
 		F2FFC6B769FFA153CF46EEEE065B0645 /* Pods-PartyLifebelt-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-PartyLifebelt-umbrella.h"; sourceTree = "<group>"; };
 		FF12EDEF2DEF9C932FFD9C4E216F5762 /* Pods-PartyLifebelt.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-PartyLifebelt.modulemap"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5582A2528F4E344DDC3B5EE857E1FCA5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				073A1F551A9BE56AA4C8A7D58263E7B7 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		767325E9FE3BEF220DCAF61335663C17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				180EECCAE2DABA987528F7A1BF0E16C1 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		A6C9DC8624363E6F2C5829E4D3961197 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,24 +111,38 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D1E24BDEBB19C65D388586AD8A16967A /* Frameworks */ = {
+		DACE3BAB60CFE157775D845A9A535C4D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				04125E7C7AD74D2A299D17BAC418E844 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		173F187A22A11FCD08ECCFFE920C29CB /* Products */ = {
+		0A06F079D5368228277D6234987E1F64 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				8C95D72193B8B0961AE8D60FA1D3F419 /* AMPopTip */,
-				09987E05BF4D4347769D03B431D4E278 /* Pods-PartyLifebelt */,
+				DC5B74A4D987B96950B4BA9B9A0ACFE4 /* AMTooltipView.xib */,
 			);
-			name = Products;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		0BFD8315E8E5CA3F725336FEC707F2D4 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				72ADD8DD7681EBCD59EAA68C68B4AD5C /* AMTooltip.modulemap */,
+				616B22B82DE9A09744813A24EF8CB5DC /* AMTooltip-dummy.m */,
+				47B3F9D19686592219F475571C6E7BD0 /* AMTooltip-Info.plist */,
+				3A51E52A98AECA10BFB7FB1708EFAEA1 /* AMTooltip-prefix.pch */,
+				B9A5FF15A8C5268295D75C409BAEC921 /* AMTooltip-umbrella.h */,
+				8C120E7531655555A9E58B7E271D4C32 /* AMTooltip.debug.xcconfig */,
+				0E3E0AF5A8ADE7671BF9DE949204CFC7 /* AMTooltip.release.xcconfig */,
+				7CC02D399E607D94078A480C906044C4 /* ResourceBundle-AMTooltip-AMTooltip-Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AMTooltip";
 			sourceTree = "<group>";
 		};
 		2BC25A12A742E0F465FECD8CFD8B3CFF /* Pods-PartyLifebelt */ = {
@@ -100,33 +162,6 @@
 			path = "Target Support Files/Pods-PartyLifebelt";
 			sourceTree = "<group>";
 		};
-		367FCDCEB80CD2881000B6DDFBFC8147 /* AMPopTip */ = {
-			isa = PBXGroup;
-			children = (
-				2A1B4AA83D16FE582FB75421EB32AA9B /* PopTip.swift */,
-				D34A67707400407EB4CDB4AF6CB5D203 /* PopTip+Draw.swift */,
-				DB2E1C78AFB7345CEE36E5B31CDB8D1F /* PopTip+Transitions.swift */,
-				51B4F2879942A06E014C14A33A31E730 /* Support Files */,
-			);
-			name = AMPopTip;
-			path = AMPopTip;
-			sourceTree = "<group>";
-		};
-		51B4F2879942A06E014C14A33A31E730 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				C7305947C25B0D3D728D0CC90400C505 /* AMPopTip.modulemap */,
-				F1ACF272F403AE1D2B58369C1D4DB8B7 /* AMPopTip-dummy.m */,
-				7E6382AA123E94E98E8937A5C14D5239 /* AMPopTip-Info.plist */,
-				8D30BDCF9AC3B9E4193D2AF0969020D0 /* AMPopTip-prefix.pch */,
-				CA2639884B88B9DC5AC2BD0063403D99 /* AMPopTip-umbrella.h */,
-				147FD80B7EDB120CCF41D8FFFFA74252 /* AMPopTip.debug.xcconfig */,
-				64CFDA21329FEEA6035C650EA931EE18 /* AMPopTip.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/AMPopTip";
-			sourceTree = "<group>";
-		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -143,13 +178,60 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
+		6B75A503E53C719123688E3D9E15FC5A /* AMPopTip */ = {
+			isa = PBXGroup;
+			children = (
+				A78B801260912B1A8B598C6300D145F1 /* PopTip.swift */,
+				222F90BB254F7457F798AA78FE92C4DF /* PopTip+Draw.swift */,
+				5B3C38A5C754BBC0153DE22EFFB4261F /* PopTip+Transitions.swift */,
+				C0EAD4873C0C1207C1C1369F59D8CA68 /* Support Files */,
+			);
+			name = AMPopTip;
+			path = AMPopTip;
+			sourceTree = "<group>";
+		};
+		ADFBEC80CBF0E407D3653979C2EE4560 /* AMTooltip */ = {
+			isa = PBXGroup;
+			children = (
+				08DCFAC210BE65D6C55FA6054462E48B /* AMTooltipView.swift */,
+				0A06F079D5368228277D6234987E1F64 /* Resources */,
+				0BFD8315E8E5CA3F725336FEC707F2D4 /* Support Files */,
+			);
+			name = AMTooltip;
+			path = AMTooltip;
+			sourceTree = "<group>";
+		};
+		C0EAD4873C0C1207C1C1369F59D8CA68 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6DB909E04D1DE39219A6650F35E906B9 /* AMPopTip.modulemap */,
+				EC952B89FB6D9C14CE69C4958DD302D4 /* AMPopTip-dummy.m */,
+				621518B532F623EFB7E0B50EABEBB055 /* AMPopTip-Info.plist */,
+				19A9FA4D9CC3A14C7F95B4534FB581A4 /* AMPopTip-prefix.pch */,
+				281C1368178CA282F7D20C3699D34DBC /* AMPopTip-umbrella.h */,
+				ECD84D74A3F949C12DFDDD1E0B18E836 /* AMPopTip.debug.xcconfig */,
+				29DD5F3FE4D4E5CA58D599F40DF0ED09 /* AMPopTip.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AMPopTip";
+			sourceTree = "<group>";
+		};
+		C6BE9DFFEA80B75723A80802176927BB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6B75A503E53C719123688E3D9E15FC5A /* AMPopTip */,
+				ADFBEC80CBF0E407D3653979C2EE4560 /* AMTooltip */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				D3960C017DA518B4D25EB86AB2117A13 /* Pods */,
-				173F187A22A11FCD08ECCFFE920C29CB /* Products */,
+				C6BE9DFFEA80B75723A80802176927BB /* Pods */,
+				D783794B8D5F45D7A0FB3CFAAAF07629 /* Products */,
 				635283CA69A71B752DE412CA08C573D5 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
@@ -162,22 +244,33 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		D3960C017DA518B4D25EB86AB2117A13 /* Pods */ = {
+		D783794B8D5F45D7A0FB3CFAAAF07629 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				367FCDCEB80CD2881000B6DDFBFC8147 /* AMPopTip */,
+				8C95D72193B8B0961AE8D60FA1D3F419 /* AMPopTip */,
+				DC8054FEA66F7AC5E72E297A3E7124B6 /* AMTooltip */,
+				3960A88C042C307187634FE124161D9A /* AMTooltip-AMTooltip */,
+				09987E05BF4D4347769D03B431D4E278 /* Pods-PartyLifebelt */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		42CEEDAFA4A661A71231B850D2BC313B /* Headers */ = {
+		39BB79D38B1DA60035A6DD9DB750FE6C /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ED5410B5184F1ACEB0CEE1979F469B5 /* Pods-PartyLifebelt-umbrella.h in Headers */,
+				CFF3536346D5E7F45C8D5BF86E88B0A4 /* AMTooltip-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CDB2DBDA374E8855E2B176BDB7E8AC3 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CF4AD5DAA1238D3F1805EFAF7CB83F6D /* Pods-PartyLifebelt-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,22 +305,59 @@
 		};
 		95ACF880861278140485B9E4A7B9E927 /* Pods-PartyLifebelt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37DB82A2F9619E26684D05622A04E4A7 /* Build configuration list for PBXNativeTarget "Pods-PartyLifebelt" */;
+			buildConfigurationList = 1E3A954E4D84C2CF739B7CB4BF75BEDF /* Build configuration list for PBXNativeTarget "Pods-PartyLifebelt" */;
 			buildPhases = (
-				42CEEDAFA4A661A71231B850D2BC313B /* Headers */,
-				C54804CF51551355035900966B266D0A /* Sources */,
-				D1E24BDEBB19C65D388586AD8A16967A /* Frameworks */,
-				9E363DF2B260609B77B8546A36178152 /* Resources */,
+				4CDB2DBDA374E8855E2B176BDB7E8AC3 /* Headers */,
+				2D79F1D8EDDB62CF6AEF75E79207B568 /* Sources */,
+				767325E9FE3BEF220DCAF61335663C17 /* Frameworks */,
+				3D3C31D334C310B3EC4FD957DFB9F09C /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				44096B2677BA5AF0D0CDFBFF55491A8C /* PBXTargetDependency */,
+				94AF7AFA6EE6DF0D174E18F2276F1CA2 /* PBXTargetDependency */,
+				DDCBA435F357CE9FE69979AAC2CE80C4 /* PBXTargetDependency */,
 			);
 			name = "Pods-PartyLifebelt";
 			productName = Pods_PartyLifebelt;
 			productReference = 09987E05BF4D4347769D03B431D4E278 /* Pods-PartyLifebelt */;
 			productType = "com.apple.product-type.framework";
+		};
+		D8F221E2DF7F004A8549777CB903E6C4 /* AMTooltip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2F98E2C73A2FB8F4925110894AC43580 /* Build configuration list for PBXNativeTarget "AMTooltip" */;
+			buildPhases = (
+				39BB79D38B1DA60035A6DD9DB750FE6C /* Headers */,
+				519140E2ED6E059BDA940AB28FA64294 /* Sources */,
+				5582A2528F4E344DDC3B5EE857E1FCA5 /* Frameworks */,
+				417735D384A8596C40A029FB2A283DA8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4049908083EDBC5309AD2687491C66DC /* PBXTargetDependency */,
+			);
+			name = AMTooltip;
+			productName = AMTooltip;
+			productReference = DC8054FEA66F7AC5E72E297A3E7124B6 /* AMTooltip */;
+			productType = "com.apple.product-type.framework";
+		};
+		E34B6117A19FD7BE1CCFD8DFA2938CFD /* AMTooltip-AMTooltip */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5CFE09E5AB5412F39EEBFC8901AF953 /* Build configuration list for PBXNativeTarget "AMTooltip-AMTooltip" */;
+			buildPhases = (
+				4520275136165DE5D76E1AD237162743 /* Sources */,
+				DACE3BAB60CFE157775D845A9A535C4D /* Frameworks */,
+				744A6F1E128F81B2698F2B01F1854331 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "AMTooltip-AMTooltip";
+			productName = AMTooltip;
+			productReference = 3960A88C042C307187634FE124161D9A /* AMTooltip-AMTooltip */;
+			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
 
@@ -247,21 +377,39 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 173F187A22A11FCD08ECCFFE920C29CB /* Products */;
+			productRefGroup = D783794B8D5F45D7A0FB3CFAAAF07629 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0B974B55B3C5F71E53DF6070DC0CF6CF /* AMPopTip */,
+				D8F221E2DF7F004A8549777CB903E6C4 /* AMTooltip */,
+				E34B6117A19FD7BE1CCFD8DFA2938CFD /* AMTooltip-AMTooltip */,
 				95ACF880861278140485B9E4A7B9E927 /* Pods-PartyLifebelt */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		9E363DF2B260609B77B8546A36178152 /* Resources */ = {
+		3D3C31D334C310B3EC4FD957DFB9F09C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		417735D384A8596C40A029FB2A283DA8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84C47B79805D94D07EDC17DA24DDFF36 /* AMTooltip-AMTooltip in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		744A6F1E128F81B2698F2B01F1854331 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7450CF68E33CAF9D30D79AC1BEA1B5D2 /* AMTooltipView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,6 +423,30 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		2D79F1D8EDDB62CF6AEF75E79207B568 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1EC4A021ECA9538418171D98669E5FE5 /* Pods-PartyLifebelt-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4520275136165DE5D76E1AD237162743 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		519140E2ED6E059BDA940AB28FA64294 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F631AD43773CD65620E8BA03447CA7E9 /* AMTooltip-dummy.m in Sources */,
+				9D7B9D7D26AD8F837866E081BC83B450 /* AMTooltipView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8CACDCFB3ECD5943D15EECA9ADEBD752 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -286,26 +458,64 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C54804CF51551355035900966B266D0A /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				612CB9595F224F3D6CFF7A58F9C0A7CC /* Pods-PartyLifebelt-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		44096B2677BA5AF0D0CDFBFF55491A8C /* PBXTargetDependency */ = {
+		4049908083EDBC5309AD2687491C66DC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "AMTooltip-AMTooltip";
+			target = E34B6117A19FD7BE1CCFD8DFA2938CFD /* AMTooltip-AMTooltip */;
+			targetProxy = 55878D8B6562337C20A627145ED5D8EE /* PBXContainerItemProxy */;
+		};
+		94AF7AFA6EE6DF0D174E18F2276F1CA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AMPopTip;
 			target = 0B974B55B3C5F71E53DF6070DC0CF6CF /* AMPopTip */;
-			targetProxy = 3F496B5360D6EECC6434F528D7850E98 /* PBXContainerItemProxy */;
+			targetProxy = DD10C4F06D79F14C7B0BDC921E6D07C2 /* PBXContainerItemProxy */;
+		};
+		DDCBA435F357CE9FE69979AAC2CE80C4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AMTooltip;
+			target = D8F221E2DF7F004A8549777CB903E6C4 /* AMTooltip */;
+			targetProxy = 68D09EFAD3F8F0F04D12C5492EEFC10A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		04709A8008858FE79FB09BCD79DE7A3F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C120E7531655555A9E58B7E271D4C32 /* AMTooltip.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/AMTooltip/AMTooltip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMTooltip/AMTooltip-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/AMTooltip/AMTooltip.modulemap";
+				PRODUCT_MODULE_NAME = AMTooltip;
+				PRODUCT_NAME = AMTooltip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		09909ECBA13E8F70A928465E7F7A9A92 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -374,7 +584,7 @@
 		};
 		1ABD0E3FC3941D17B48E694F0EB6D701 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 147FD80B7EDB120CCF41D8FFFFA74252 /* AMPopTip.debug.xcconfig */;
+			baseConfigurationReference = ECD84D74A3F949C12DFDDD1E0B18E836 /* AMPopTip.debug.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -407,9 +617,46 @@
 			};
 			name = Debug;
 		};
+		200531BF5DA07EA3866A84B5577FD14D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44AE15C21186FB6B828011B64DBF09F3 /* Pods-PartyLifebelt.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		28967F31445B2BCDCC3A826FCDA2E116 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 64CFDA21329FEEA6035C650EA931EE18 /* AMPopTip.release.xcconfig */;
+			baseConfigurationReference = 29DD5F3FE4D4E5CA58D599F40DF0ED09 /* AMPopTip.release.xcconfig */;
 			buildSettings = {
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -505,12 +752,42 @@
 			};
 			name = Release;
 		};
-		317CD8767D80884EBF7D049F801DCE5D /* Debug */ = {
+		4C374ED2E4AAF64D2AF7F2A8755FAF9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 44AE15C21186FB6B828011B64DBF09F3 /* Pods-PartyLifebelt.debug.xcconfig */;
+			baseConfigurationReference = 0E3E0AF5A8ADE7671BF9DE949204CFC7 /* AMTooltip.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AMTooltip";
+				IBSC_MODULE = AMTooltip;
+				INFOPLIST_FILE = "Target Support Files/AMTooltip/ResourceBundle-AMTooltip-AMTooltip-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = AMTooltip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		A3D9184C95B50A0156CF6B3C6994173E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C120E7531655555A9E58B7E271D4C32 /* AMTooltip.debug.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/AMTooltip";
+				IBSC_MODULE = AMTooltip;
+				INFOPLIST_FILE = "Target Support Files/AMTooltip/ResourceBundle-AMTooltip-AMTooltip-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				PRODUCT_NAME = AMTooltip;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		B60A9FD8A404FBDC96FB6AFDB8E3D52F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0E3E0AF5A8ADE7671BF9DE949204CFC7 /* AMTooltip.release.xcconfig */;
+			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -519,30 +796,30 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt-Info.plist";
+				GCC_PREFIX_HEADER = "Target Support Files/AMTooltip/AMTooltip-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AMTooltip/AMTooltip-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				MODULEMAP_FILE = "Target Support Files/AMTooltip/AMTooltip.modulemap";
+				PRODUCT_MODULE_NAME = AMTooltip;
+				PRODUCT_NAME = AMTooltip;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
-		ABD669D165345AC228F6550001094415 /* Release */ = {
+		C7C5C1F8F92EC7CC234194348F85FBDA /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A5E60001BAABB41A6431E160722066C2 /* Pods-PartyLifebelt.release.xcconfig */;
 			buildSettings = {
@@ -583,11 +860,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		37DB82A2F9619E26684D05622A04E4A7 /* Build configuration list for PBXNativeTarget "Pods-PartyLifebelt" */ = {
+		1E3A954E4D84C2CF739B7CB4BF75BEDF /* Build configuration list for PBXNativeTarget "Pods-PartyLifebelt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				317CD8767D80884EBF7D049F801DCE5D /* Debug */,
-				ABD669D165345AC228F6550001094415 /* Release */,
+				200531BF5DA07EA3866A84B5577FD14D /* Debug */,
+				C7C5C1F8F92EC7CC234194348F85FBDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2F98E2C73A2FB8F4925110894AC43580 /* Build configuration list for PBXNativeTarget "AMTooltip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04709A8008858FE79FB09BCD79DE7A3F /* Debug */,
+				B60A9FD8A404FBDC96FB6AFDB8E3D52F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -606,6 +892,15 @@
 			buildConfigurations = (
 				1ABD0E3FC3941D17B48E694F0EB6D701 /* Debug */,
 				28967F31445B2BCDCC3A826FCDA2E116 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5CFE09E5AB5412F39EEBFC8901AF953 /* Build configuration list for PBXNativeTarget "AMTooltip-AMTooltip" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A3D9184C95B50A0156CF6B3C6994173E /* Debug */,
+				4C374ED2E4AAF64D2AF7F2A8755FAF9A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
