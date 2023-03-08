@@ -1,16 +1,20 @@
 PODS:
   - AMPopTip (4.10.0)
+  - AMTooltip (1.0.4)
 
 DEPENDENCIES:
   - AMPopTip
+  - AMTooltip
 
 SPEC REPOS:
   trunk:
     - AMPopTip
+    - AMTooltip
 
 SPEC CHECKSUMS:
   AMPopTip: 4630471652faf06872f72a39bfcb6f5b68a7e208
+  AMTooltip: 30aa4acb70968e99d24f72c35153ace0c896d99f
 
-PODFILE CHECKSUM: d2eaf3a23c879dbe48c54954bb87f5bd60a0272b
+PODFILE CHECKSUM: 6d0c218c86d650c6fe1b102fff7698f39346ea32
 
 COCOAPODS: 1.11.3

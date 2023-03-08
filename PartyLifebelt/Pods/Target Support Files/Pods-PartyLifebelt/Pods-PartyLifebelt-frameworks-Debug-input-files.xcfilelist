@@ -1,2 +1,3 @@
 ${PODS_ROOT}/Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/AMPopTip/AMPopTip.framework
+${BUILT_PRODUCTS_DIR}/AMTooltip/AMTooltip.framework

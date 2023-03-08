@@ -6,12 +6,11 @@
 //
 
 import UIKit
-import AMPopTip
+import AMTooltip
 
 class GamesViewController: UIViewController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
-    var popTip = PopTip()
     
     @IBOutlet weak var truthOrDareTooltip: UIButton!
     @IBOutlet weak var neverHaveIEverTooltip: UIButton!
@@ -45,48 +44,70 @@ class GamesViewController: UIViewController, Storyboarded {
     
     @IBAction func truthOrDareToolTip(_ sender: Any) {
         
-        guard let truth = truthOrDareTooltip.imageView else { return }
-        popTip.show(text: "If you choose True - you must trustly answer the question, when you choose Dare - you must do the challange! Easy, isn't it?", direction: .auto, maxWidth: 200, in: truth, from: CGRect(x: truth.frame.height/2, y: truth.frame.width/2, width: 0, height: 0))
-        popTip.bubbleColor = .white
-        popTip.textColor = .black
-        popTip.shadowColor = .lightGray
-
+        AMTooltipView(
+            options:AMTooltipViewOptions(
+                side: .bottom,
+                textColor: UIColor.black,
+                textBoxBackgroundColor: UIColor.white,
+                addOverlayView: true,
+                lineColor: UIColor.clear,
+                lineHeight: 4,
+                dotColor: UIColor.clear,
+                dotBorderColor: UIColor.clear
+            ),
+            message: "If you choose True - you must trustly answer the question, when you choose Dare - you must do the challange! Easy, isn't it?",
+            focusView: sender as! UIView,
+            target: self)
     }
     
     @IBAction func neverHaveIEverToolTip(_ sender: Any) {
-        
-        let finishHeigh = neverHaveIEverTooltip.frame.height + gamesButtonsView.frame.height + 8
-        let finishWidth = neverHaveIEverTooltip.frame.width + gamesButtonsView.frame.width - 52
-        let fromToolTip = CGRect(x: finishWidth, y: finishHeigh, width: 0, height: 0)
-    
-        popTip.show(text: "If you see the sentence have you ever do - you need drink your JUICY. It's fun!", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
-        popTip.bubbleColor = .white
-        popTip.textColor = .black
-        popTip.shadowColor = .lightGray
+        AMTooltipView(
+            options:AMTooltipViewOptions(
+                side: .bottom,
+                textColor: UIColor.black,
+                textBoxBackgroundColor: UIColor.white,
+                addOverlayView: true,
+                lineColor: UIColor.clear,
+                lineHeight: 4,
+                dotColor: UIColor.clear,
+                dotBorderColor: UIColor.clear
+            ),
+            message: "If you see the sentence have you ever do - you need drink your JUICY. It's fun!",
+            focusView: sender as! UIView,
+            target: self)
     }
     
     @IBAction func thisOrThatToolTip(_ sender: Any) {
-        
-        let finishHeigh = thisOrThatTooltip.frame.height + gamesButtonsView.frame.height + 235
-        let finishWidth = thisOrThatTooltip.frame.width + gamesButtonsView.frame.width - 223
-        let fromToolTip = CGRect(x: finishWidth, y: finishHeigh, width: 0, height: 0)
-    
-        popTip.show(text: "Each player chooses one of the options, the option that the minority chose loses and those voting for it must drink!", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
-        popTip.bubbleColor = .white
-        popTip.textColor = .black
-        popTip.shadowColor = .lightGray
+        AMTooltipView(
+            options:AMTooltipViewOptions(
+                side: .auto,
+                textColor: UIColor.black,
+                textBoxBackgroundColor: UIColor.white,
+                addOverlayView: true,
+                lineColor: UIColor.clear,
+                dotColor: UIColor.clear,
+                dotBorderColor: UIColor.clear
+            ),
+            message: "Each player chooses one of the options, the option that the minority chose loses and those voting for it must drink!",
+            focusView: sender as! UIView,
+            target: self)
     }
     
     @IBAction func sevenSecondsToolTip(_ sender: Any) {
-        
-        let finishHeigh = sevenSecondsTooltip.frame.height + gamesButtonsView.frame.height + 235
-        let finishWidth = sevenSecondsTooltip.frame.width + gamesButtonsView.frame.width - 52
-        let fromToolTip = CGRect(x: finishWidth, y: finishHeigh, width: 0, height: 0)
-    
-        popTip.show(text: "Get your stopwatch ready! Once the task is displayed and read, the player has 7 seconds to complete the instruction! If he fails he need to drink! Be fast!", direction: .down, maxWidth: 200, in: view, from: fromToolTip)
-        popTip.bubbleColor = .white
-        popTip.textColor = .black
-        popTip.shadowColor = .lightGray
+        AMTooltipView(
+            options:AMTooltipViewOptions(
+                side: .auto,
+                textColor: UIColor.black,
+                textBoxBackgroundColor: UIColor.white,
+                addOverlayView: true,
+                lineColor: UIColor.clear,
+                lineHeight: 4,
+                dotColor: UIColor.clear,
+                dotBorderColor: UIColor.clear
+            ),
+            message: "Get your stopwatch ready! Once the task is displayed and read, the player has 7 seconds to complete the instruction! If he fails he need to drink! Be fast!",
+            focusView: sender as! UIView,
+            target: self)
     }
     
     
