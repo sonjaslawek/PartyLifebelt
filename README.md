@@ -27,7 +27,14 @@ After selecting the GAMES tab, we are taken to the game selection view. Each gam
 <img src="https://user-images.githubusercontent.com/121167654/220070895-27a5c542-c123-4a1d-a263-bfc6828a1ec4.png" width="150" height="300"/>
 </div>
 
-Another section is the DRINKS section, where we can search for a drink recipe by the ingredient we are interested in, by name or select it from a list. But that's not all! For those who are very indecisive, there is a RANDOM button that will draw a drink recipe for us from the database: 
+Another section is the DRINKS section, where we can search for a drink recipe by the ingredient we are interested in, by name or select it from a list. In addition, we can filter drinks into alcoholic and non-alcoholic using the segment at the bottom of the screen. But that's not all! For the very indecisive, there is a RANDOM button that will draw a drink recipe for us from the database. After selecting a specific item, we go to the details about our drink, i.e. information such as the title of the drink, the serving suggestion according to the photo, whether the drink contains alcohol, the necessary ingredients and the recipe. 
+
+<div align="center">
+<img src="https://user-images.githubusercontent.com/121167654/223985318-29c8ad3a-6e76-47d2-b9ec-d416d91d7026.png" width="200" height="400"/>
+<img src="https://user-images.githubusercontent.com/121167654/223985611-141bb24e-8ad4-4c5f-bb7a-61b24519f693.png" width="200" height="400"/>
+</div>
+
+The last section available is FOOD....
 
 <div id="header" align="center"><img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExYzc0NjZiNjk3YmQ4ZjQ2ZWUwZTExMjk1OTkzYjAxNzJmYjU0NGE4ZiZjdD1z/zvCCweN7arro5ZOy7w/giphy.gif" width="200"/></div>
 
