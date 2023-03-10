@@ -452,19 +452,57 @@
             </objects>
             <point key="canvasLocation" x="2512.8000000000002" y="280.20989505247377"/>
         </scene>
-        <!--Food View Controller-->
+        <!--Food Tab Bar Controller-->
         <scene sceneID="Jin-OY-zeb">
             <objects>
-                <viewController storyboardIdentifier="FoodViewController" id="mH0-1S-Wn1" customClass="FoodViewController" customModule="PartyLifebelt" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOODBackground" id="Ix4-tP-WPi">
+                <viewController storyboardIdentifier="FoodTabBarController" hidesBottomBarWhenPushed="YES" useStoryboardIdentifierAsRestorationIdentifier="YES" id="mH0-1S-Wn1" customClass="FoodTabBarController" customModule="PartyLifebelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RHV-kw-kAc">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                    </imageView>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOODBackground" translatesAutoresizingMaskIntoConstraints="NO" id="13u-Ev-zoX">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="FOOD" translatesAutoresizingMaskIntoConstraints="NO" id="Rjc-l5-87s">
+                                <rect key="frame" x="31" y="34" width="312" height="77"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="o4T-Rf-2MP">
+                                <rect key="frame" x="44" y="119" width="299" height="450"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexTrackingBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="FoodCell" id="ecX-f7-9cu">
+                                        <rect key="frame" x="0.0" y="44.5" width="299" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ecX-f7-9cu" id="piS-cg-12c">
+                                            <rect key="frame" x="0.0" y="0.0" width="299" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="tSd-bQ-UHN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="13u-Ev-zoX" firstAttribute="trailing" secondItem="tSd-bQ-UHN" secondAttribute="trailing" id="CUt-pm-a5B"/>
+                            <constraint firstAttribute="bottom" secondItem="13u-Ev-zoX" secondAttribute="bottom" id="GfK-Wg-Ivu"/>
+                            <constraint firstItem="13u-Ev-zoX" firstAttribute="leading" secondItem="tSd-bQ-UHN" secondAttribute="leading" id="f1C-lW-pCE"/>
+                            <constraint firstItem="13u-Ev-zoX" firstAttribute="top" secondItem="RHV-kw-kAc" secondAttribute="top" id="t3D-Cf-6bL"/>
+                        </constraints>
+                    </view>
                     <navigationItem key="navigationItem" id="cKz-N4-VjQ"/>
+                    <connections>
+                        <outlet property="foodTableView" destination="o4T-Rf-2MP" id="PBo-eP-JPP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0jK-7O-gMu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1709" y="960"/>
+            <point key="canvasLocation" x="1708" y="959.37031484257875"/>
         </scene>
         <!--Games View Controller-->
         <scene sceneID="9UV-Ha-tTr">
@@ -1353,6 +1391,95 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BeI-xo-xkt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3378.4000000000001" y="-397.15142428785612"/>
+        </scene>
+        <!--Detail Food View Controller-->
+        <scene sceneID="tfa-sw-fqe">
+            <objects>
+                <viewController storyboardIdentifier="DetailFoodViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="jH8-j2-nSy" customClass="DetailFoodViewController" customModule="PartyLifebelt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dwH-Ej-kgb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="FOODBackground" translatesAutoresizingMaskIntoConstraints="NO" id="Xc4-km-3ez">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Recipe here :)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="8Jg-bz-Vmy">
+                                <rect key="frame" x="60" y="538" width="263" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recipe:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rtv-bQ-49a">
+                                <rect key="frame" x="67" y="501" width="87" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category here :)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UbE-4P-pzi">
+                                <rect key="frame" x="177" y="311" width="166" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Category:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u3y-Be-lET">
+                                <rect key="frame" x="60" y="311" width="109" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Food title :) " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lPA-Kt-Zks">
+                                <rect key="frame" x="30" y="37" width="313" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="23"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="G6Q-Hx-kxT">
+                                <rect key="frame" x="67" y="82" width="240" height="204"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vsF-Fw-I8V">
+                                <rect key="frame" x="60" y="364" width="139" height="45"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Ingredients here :)" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CUS-4T-nmd">
+                                <rect key="frame" x="67" y="406" width="263" height="87"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="15"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="BsS-yj-1pF"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Xc4-km-3ez" firstAttribute="leading" secondItem="BsS-yj-1pF" secondAttribute="leading" id="dLX-cT-KXM"/>
+                            <constraint firstAttribute="bottom" secondItem="Xc4-km-3ez" secondAttribute="bottom" id="jzT-Pi-SFY"/>
+                            <constraint firstItem="Xc4-km-3ez" firstAttribute="trailing" secondItem="BsS-yj-1pF" secondAttribute="trailing" id="qzm-3y-zlV"/>
+                            <constraint firstItem="Xc4-km-3ez" firstAttribute="top" secondItem="dwH-Ej-kgb" secondAttribute="top" id="sDC-e2-rjC"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vCY-Gh-w2x"/>
+                    <connections>
+                        <outlet property="categoryLabel" destination="UbE-4P-pzi" id="oIW-Zd-Hgq"/>
+                        <outlet property="foodImage" destination="G6Q-Hx-kxT" id="SWe-QN-b02"/>
+                        <outlet property="foodTitleLabel" destination="lPA-Kt-Zks" id="P7z-OY-jgX"/>
+                        <outlet property="ingredientsTextView" destination="CUS-4T-nmd" id="ocF-yy-OjD"/>
+                        <outlet property="recipeTextView" destination="8Jg-bz-Vmy" id="AmS-OC-UYa"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NiQ-rM-9vA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2560.8000000000002" y="958.4707646176912"/>
         </scene>
     </scenes>
     <resources>

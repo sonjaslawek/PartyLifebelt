@@ -65,6 +65,16 @@ class DrinksViewController: UIViewController, UISearchResultsUpdating, Storyboar
         print("Random drink will be present")
     }
     
+    func loadDrinks() {
+        drinkAPI.getAllData {
+            DispatchQueue.main.async {
+               self.drinkModel = self.drinkAPI.drinkArray
+                self.searchBarItems = self.drinkModel//.sorted(by: {$0.strDrink < $1.strDrink})
+                self.drinksTableView.reloadData()
+            }
+        }
+    }
+    
     // MARK: Setting Navigation Bar
     private func setNavigationBarImage() {
         let backButton = UIBarButtonItem(image: UIImage(named: "homeButton"), style: .plain, target: self, action: #selector(goTo))
@@ -77,15 +87,8 @@ class DrinksViewController: UIViewController, UISearchResultsUpdating, Storyboar
         coordinator?.start()
     }
     
-    func loadDrinks() {
-        drinkAPI.getAllData {
-            DispatchQueue.main.async {
-               self.drinkModel = self.drinkAPI.drinkArray
-                self.searchBarItems = self.drinkModel//.sorted(by: {$0.strDrink < $1.strDrink})
-                self.drinksTableView.reloadData()
-            }
-        }
-    }
+    
+   
 }
 
 // MARK: TableView Delegate Methods

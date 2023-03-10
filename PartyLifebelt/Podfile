@@ -5,5 +5,7 @@ target 'PartyLifebelt' do
   # Pods for PartyLifebelt
 pod 'AMPopTip'
 pod "AMTooltip"
+pod "Alamofire"
+pod "SwiftyJSON"
 
 end

@@ -36,7 +36,7 @@ class MainCoordinator: Coordinator {
     }
     
     func foodView() {
-        let fc = FoodViewController.instantiate()
+        let fc = FoodTabBarController.instantiate()
         fc.coordinator = self
         navigationController.pushViewController(fc, animated: true)
     }
@@ -70,6 +70,12 @@ class MainCoordinator: Coordinator {
         dd.coordinator = self
         dd.drink = model
         navigationController.pushViewController(dd, animated: true)
+    }
+    
+    func detailFoodView() {
+        let df = DetailFoodViewController.instantiate()
+        df.coordinator = self
+        navigationController.pushViewController(df, animated: true)
     }
 
 }
