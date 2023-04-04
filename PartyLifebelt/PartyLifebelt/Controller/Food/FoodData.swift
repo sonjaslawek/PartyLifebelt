@@ -20,7 +20,7 @@ class FoodData {
     var foodArray: [FoodModel] = []
     
     func getFoodData() {
-        let url = "https://www.themealdb.com/api/json/v1/1/search.php?f=a" //+ letters[letterIndex]
+        let url = "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
         
         AF.request(url).response { response in
             switch response.result {
