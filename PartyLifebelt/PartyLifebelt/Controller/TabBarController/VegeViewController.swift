@@ -7,7 +7,7 @@
 
 import UIKit
 
-class VegeViewController: UIViewController {
+class VegeViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()

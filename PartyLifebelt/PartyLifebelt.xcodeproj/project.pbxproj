@@ -39,7 +39,6 @@
 		63B8043C29BB64A00015B420 /* RandomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B8043B29BB64A00015B420 /* RandomViewController.swift */; };
 		63B8043E29BB64BB0015B420 /* DessertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B8043D29BB64BB0015B420 /* DessertViewController.swift */; };
 		63B8044029BB65690015B420 /* AllFoodViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B8043F29BB65690015B420 /* AllFoodViewController.swift */; };
-		63B8044229BB66980015B420 /* FoodTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63B8044129BB66980015B420 /* FoodTabBarController.swift */; };
 		63F7601F29B9DCD5009CB18D /* FoodModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F7601E29B9DCD5009CB18D /* FoodModel.swift */; };
 		63F7602129BA0BFB009CB18D /* FoodData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63F7602029BA0BFB009CB18D /* FoodData.swift */; };
 		6524E3682340E77640A0C5C2 /* Pods_PartyLifebelt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D8C88790884DC30CC27ED78F /* Pods_PartyLifebelt.framework */; };
@@ -80,7 +79,6 @@
 		63B8043B29BB64A00015B420 /* RandomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomViewController.swift; sourceTree = "<group>"; };
 		63B8043D29BB64BB0015B420 /* DessertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertViewController.swift; sourceTree = "<group>"; };
 		63B8043F29BB65690015B420 /* AllFoodViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllFoodViewController.swift; sourceTree = "<group>"; };
-		63B8044129BB66980015B420 /* FoodTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodTabBarController.swift; sourceTree = "<group>"; };
 		63F7601E29B9DCD5009CB18D /* FoodModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodModel.swift; sourceTree = "<group>"; };
 		63F7602029BA0BFB009CB18D /* FoodData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoodData.swift; sourceTree = "<group>"; };
 		6E6CFD76CDA1BF1F6177B9D7 /* Pods-PartyLifebelt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PartyLifebelt.release.xcconfig"; path = "Target Support Files/Pods-PartyLifebelt/Pods-PartyLifebelt.release.xcconfig"; sourceTree = "<group>"; };
@@ -248,7 +246,6 @@
 		63B8043829BB646C0015B420 /* TabBarController */ = {
 			isa = PBXGroup;
 			children = (
-				63B8044129BB66980015B420 /* FoodTabBarController.swift */,
 				63B8043F29BB65690015B420 /* AllFoodViewController.swift */,
 				63B8043929BB64910015B420 /* VegeViewController.swift */,
 				63B8043D29BB64BB0015B420 /* DessertViewController.swift */,
@@ -397,7 +394,6 @@
 				6394571B2982D9BA0069B40F /* NeverHaveIEverGameViewController.swift in Sources */,
 				631FF1122988162500C4CC8C /* SevenSecondsGameModel.swift in Sources */,
 				631FF11729881F4000C4CC8C /* ThisOrThatGameModel.swift in Sources */,
-				63B8044229BB66980015B420 /* FoodTabBarController.swift in Sources */,
 				63B8043729BB370C0015B420 /* DetailFoodViewController.swift in Sources */,
 				639457102981B44F0069B40F /* GamesViewController.swift in Sources */,
 				633ADE10299D03A400248AA6 /* DrinksModel.swift in Sources */,

@@ -7,12 +7,11 @@
 
 import UIKit
 
-class AllFoodViewController: UIViewController {
+class AllFoodViewController: UIViewController, Storyboarded {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("eee")
     }
-    
-
+   
 }

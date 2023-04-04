@@ -1,21 +1,23 @@
-////
-////  FoodTabViewController.swift
-////  PartyLifebelt
-////
-////  Created by Sonja on 10/03/2023.
-////
+//
+//  FoodTabViewController.swift
+//  PartyLifebelt
+//
+//  Created by Sonja on 10/03/2023.
+//
 
 import UIKit
 
 class FoodTabBarController: UITabBarController, Storyboarded {
     
     weak var coordinator: MainCoordinator?
+    var foodAPI = FoodData()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         tabBarController?.tabBar.backgroundColor = .green
         setTabBar()
         setNavigationBarImage()
+       // foodAPI.getFoodData()
     }
     
     // MARK: Setting Navigation Bar
@@ -31,10 +33,10 @@ class FoodTabBarController: UITabBarController, Storyboarded {
     }
 
    func setTabBar() {
-        let allTab = AllFoodViewController()
-        let vegeTab = VegeViewController()
-        let dessertTab = DessertViewController()
-        let randomTab = RandomViewController()
+        let allTab = FoodViewController()
+        let vegeTab = FoodViewController()
+        let dessertTab = FoodViewController()
+        let randomTab = FoodViewController()
 
        allTab.navigationItem.largeTitleDisplayMode = .always
         let allNav = UINavigationController(rootViewController: allTab)

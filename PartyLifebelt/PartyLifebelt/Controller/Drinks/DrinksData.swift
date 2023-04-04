@@ -9,6 +9,7 @@ import Foundation
 
 class DrinkData {
     
+    static let shared = DrinkData()
     struct Returned: Codable {
         var drinks: [DrinkModel]
     }
@@ -16,8 +17,6 @@ class DrinkData {
     var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     var letterIndex = 0
     var isFetching = false
-    var searchText = ""
-    var baseURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s="
     var drinkArray: [DrinkModel] = []
     
     func getAllData(completed: @escaping () -> () ) {

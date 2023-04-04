@@ -23,53 +23,53 @@ class MainCoordinator: Coordinator {
     }
     
     func gamesView() {
-        let gc = GamesViewController.instantiate()
-        gc.coordinator = self
-        navigationController.pushViewController(gc, animated: true)
+        let GamesViewController = GamesViewController.instantiate()
+        GamesViewController.coordinator = self
+        navigationController.pushViewController(GamesViewController, animated: true)
     }
    
     
     func drinksView() {
-        let dc = DrinksViewController.instantiate()
-        dc.coordinator = self
-        navigationController.pushViewController(dc, animated: true)
+        let DrinksViewController = DrinksViewController.instantiate()
+        DrinksViewController.coordinator = self
+        navigationController.pushViewController(DrinksViewController, animated: true)
     }
     
     func foodView() {
-        let fc = FoodTabBarController.instantiate()
+        let fc = FoodViewController.instantiate()
         fc.coordinator = self
         navigationController.pushViewController(fc, animated: true)
     }
     
     func truthOrDareGameView() {
-        let tod = TruthOrDareGameViewController.instantiate()
-        tod.coordinator = self
-        navigationController.pushViewController(tod, animated: true)
+        let TruthOrDareGameViewController = TruthOrDareGameViewController.instantiate()
+        TruthOrDareGameViewController.coordinator = self
+        navigationController.pushViewController(TruthOrDareGameViewController, animated: true)
     }
     
     func neverHaveIEverGameView() {
-        let nh = NeverHaveIEverGameViewController.instantiate()
-        nh.coordinator = self
-        navigationController.pushViewController(nh, animated: true)
+        let NeverHaveIEverGameViewController = NeverHaveIEverGameViewController.instantiate()
+        NeverHaveIEverGameViewController.coordinator = self
+        navigationController.pushViewController(NeverHaveIEverGameViewController, animated: true)
     }
     
     func thisOrThatGameView() {
-        let tot = ThisOrThatGameViewController.instantiate()
-        tot.coordinator = self
-        navigationController.pushViewController(tot, animated: true)
+        let ThisOrThatGameViewController = ThisOrThatGameViewController.instantiate()
+        ThisOrThatGameViewController.coordinator = self
+        navigationController.pushViewController(ThisOrThatGameViewController, animated: true)
     }
     
     func sevenSecondsGameView() {
-        let ss = SevenSecondsGameViewController.instantiate()
-        ss.coordinator = self
-        navigationController.pushViewController(ss, animated: true)
+        let SevenSecondsGameViewController = SevenSecondsGameViewController.instantiate()
+        SevenSecondsGameViewController.coordinator = self
+        navigationController.pushViewController(SevenSecondsGameViewController, animated: true)
     }
     
     func detailDrinksView(model:DrinkModel) {
-        let dd = DetailDrinksViewController.instantiate()
-        dd.coordinator = self
-        dd.drink = model
-        navigationController.pushViewController(dd, animated: true)
+        let DetailDrinksViewController = DetailDrinksViewController.instantiate()
+        DetailDrinksViewController.coordinator = self
+        DetailDrinksViewController.drink = model
+        navigationController.pushViewController(DetailDrinksViewController, animated: true)
     }
     
     func detailFoodView() {
