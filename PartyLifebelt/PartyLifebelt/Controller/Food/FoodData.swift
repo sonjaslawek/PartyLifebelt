@@ -8,32 +8,37 @@
 import Foundation
 import Alamofire
 
+enum EndPointType: String {
+    case snack = "&mealType=Snack"
+    case vegan = "&health=vegan" // TODO?
+}
+
 class FoodData {
     
-    struct FoodResponse: Codable {
-        let foods: [FoodModel]
-    }
+    let appID = "d14bc5eb"
+    let appKey = "d6a6072ff3ea8cf035a491e22747124b"
+    var foodModel: [FoodModel] = []
     
-    var letters = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-    var letterIndex = 0
-    
-    var foodArray: [FoodModel] = []
-    
-    func getFoodData() {
-        let url = "https://www.themealdb.com/api/json/v1/1/search.php?f=a"
+    func getFoodData(endPoint: EndPointType, completed: @escaping () -> ()) {
         
-        AF.request(url).response { response in
+        
+        let endpoint = "https://api.edamam.com/api/recipes/v2?type=public&app_id=\(appID)&app_key=\(appKey)\(endPoint.rawValue)"
+        
+        AF.request(endpoint).responseJSON { response in
             switch response.result {
-            case .success(let data):
+            case .success:
+                print(endpoint)
                 do {
-                    let jsonData = try JSONDecoder().decode(FoodResponse.self, from: data!)
-                    self.foodArray = jsonData.foods
-                    print("asd \(self.foodArray)")
+                    let jsonData = try JSONDecoder().decode(FoodModel.self, from: response.data!)
+                    self.foodModel = [jsonData]
+                    print("asd \(self.foodModel)")
+                    print(self.foodModel[0].hits[0].recipe.label)
                 } catch {
                     print(error.localizedDescription)
+                    print(String(describing: error))
                 }
                 print(response.data)
-                
+
             case .failure(let error):
                 print(error.localizedDescription)
             }

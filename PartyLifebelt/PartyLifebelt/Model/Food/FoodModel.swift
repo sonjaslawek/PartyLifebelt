@@ -8,57 +8,157 @@
 import Foundation
 
 struct FoodModel: Codable {
-    let idMeal: String?
-    let strMeal: String?
-    let strDrinkAlternate: String?
-    let strCategory: String?
-    let strArea: String?
-    let strInstructions: String?
-    let strMealThumb: String?
-    let strTags: String?
-    let strYoutube: String?
-    let strIngredient1: String?
-    let strIngredient2: String?
-    let strIngredient3: String?
-    let strIngredient4: String?
-    let strIngredient5: String?
-    let strIngredient6: String?
-    let strIngredient7: String?
-    let strIngredient8: String?
-    let strIngredient9: String?
-    let strIngredient10: String?
-    let strIngredient11: String?
-    let strIngredient12: String?
-    let strIngredient13: String?
-    let strIngredient14: String?
-    let strIngredient15: String?
-    let strIngredient16: String?
-    let strIngredient17: String?
-    let strIngredient18: String?
-    let strIngredient19: String?
-    let strIngredient20: String?
-    let strMeasure1: String?
-    let strMeasure2: String?
-    let strMeasure3: String?
-    let strMeasure4: String?
-    let strMeasure5: String?
-    let strMeasure6: String?
-    let strMeasure7: String?
-    let strMeasure8: String?
-    let strMeasure9: String?
-    let strMeasure10: String?
-    let strMeasure11: String?
-    let strMeasure12: String?
-    let strMeasure13: String?
-    let strMeasure14: String?
-    let strMeasure15: String?
-    let strMeasure16: String?
-    let strMeasure17: String?
-    let strMeasure18: String?
-    let strMeasure19: String?
-    let strMeasure20: String?
-    let strSource: String?
-    let strImageSource: String?
-    let strCreativeCommonsConfirmed: String?
-    let dateModified: String?
+    let from, to, count: Int
+    let links: FoodModelLinks
+    let hits: [Hit]
+
+    enum CodingKeys: String, CodingKey {
+        case from, to, count
+        case links = "_links"
+        case hits
+    }
+}
+
+// MARK: - Hit
+struct Hit: Codable {
+    let recipe: Recipe
+    let links: HitLinks
+
+    enum CodingKeys: String, CodingKey {
+        case recipe
+        case links = "_links"
+    }
+}
+
+// MARK: - HitLinks
+struct HitLinks: Codable {
+    let linksSelf: Next
+
+    enum CodingKeys: String, CodingKey {
+        case linksSelf = "self"
+    }
+}
+
+// MARK: - Next
+struct Next: Codable {
+    let href: String
+    let title: Title
+}
+
+enum Title: String, Codable {
+    case nextPage = "Next page"
+    case titleSelf = "Self"
+}
+
+// MARK: - Recipe
+struct Recipe: Codable {
+    let uri: String
+    let label: String
+    let image: String
+    let images: Images
+    let source: String
+    let url: String
+    let shareAs: String
+    let yield: Int
+    let dietLabels: [DietLabel]
+    let healthLabels, cautions, ingredientLines: [String]
+    let ingredients: [Ingredient]
+    let calories, totalWeight: Double
+    let totalTime: Int
+    let cuisineType: [String]
+    let mealType: [String]
+    let dishType: [String]
+    let totalNutrients, totalDaily: [String: Total]
+    let digest: [Digest]
+}
+
+enum DietLabel: String, Codable {
+    case balanced = "Balanced"
+    case highFiber = "High-Fiber"
+    case lowCarb = "Low-Carb"
+    case lowFat = "Low-Fat"
+    case lowSodium = "Low-Sodium"
+}
+
+// MARK: - Digest
+struct Digest: Codable {
+    let label, tag: String
+    let schemaOrgTag: SchemaOrgTag?
+    let total: Double
+    let hasRDI: Bool
+    let daily: Double
+    let unit: Unit
+    let sub: [Digest]?
+}
+
+enum SchemaOrgTag: String, Codable {
+    case carbohydrateContent = "carbohydrateContent"
+    case cholesterolContent = "cholesterolContent"
+    case fatContent = "fatContent"
+    case fiberContent = "fiberContent"
+    case proteinContent = "proteinContent"
+    case saturatedFatContent = "saturatedFatContent"
+    case sodiumContent = "sodiumContent"
+    case sugarContent = "sugarContent"
+    case transFatContent = "transFatContent"
+}
+
+enum Unit: String, Codable {
+    case empty = "%"
+    case g = "g"
+    case kcal = "kcal"
+    case mg = "mg"
+    case µg = "µg"
+}
+
+// MARK: - Images
+struct Images: Codable {
+    let thumbnail, small, regular: Large
+    let large: Large?
+
+    enum CodingKeys: String, CodingKey {
+        case thumbnail = "THUMBNAIL"
+        case small = "SMALL"
+        case regular = "REGULAR"
+        case large = "LARGE"
+    }
+}
+
+// MARK: - Large
+struct Large: Codable {
+    let url: String
+    let width, height: Int
+}
+
+// MARK: - Ingredient
+struct Ingredient: Codable {
+    let text: String
+    let quantity: Double
+    let measure: String?
+    let food: String
+    let weight: Double
+    let foodCategory, foodID: String
+    let image: String?
+
+    enum CodingKeys: String, CodingKey {
+        case text, quantity, measure, food, weight, foodCategory
+        case foodID = "foodId"
+        case image
+    }
+}
+
+enum MealType: String, Codable {
+    case snack = "snack"
+}
+
+// MARK: - Total
+struct Total: Codable {
+    let label: String
+    let quantity: Double
+    let unit: Unit
+}
+
+// MARK: - FoodModelLinks
+struct FoodModelLinks: Codable {
+    let next: Next
 }

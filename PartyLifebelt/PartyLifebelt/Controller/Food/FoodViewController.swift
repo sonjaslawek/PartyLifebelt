@@ -20,6 +20,9 @@ class FoodViewController: UIViewController, Storyboarded {
         setNavigationBarImage()
         foodTableView.delegate = self
         foodTableView.dataSource = self
+        foodAPI.getFoodData(endPoint: .snack) {
+            print("elo")
+        }
     }
     
     // MARK: Setting Navigation Bar
@@ -38,7 +41,7 @@ class FoodViewController: UIViewController, Storyboarded {
 // MARK: TableView Delegate Methods
 extension FoodViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.testCell.count
+        return testCell.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
