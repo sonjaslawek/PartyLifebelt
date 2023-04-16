@@ -9,17 +9,18 @@ import UIKit
 
 class FoodViewController: UIViewController, Storyboarded {
     
-    @IBOutlet weak var foodTableView: UITableView!
+   
     weak var coordinator: MainCoordinator?
+    @IBOutlet weak var foodCollectionView: UICollectionView!
     var foodAPI = FoodData()
     var foodModel: [FoodModel] = []
     var testCell = ["jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        foodCollectionView.dataSource = self
+        foodCollectionView.delegate = self
         setNavigationBarImage()
-        foodTableView.delegate = self
-        foodTableView.dataSource = self
         foodAPI.getFoodData(endPoint: .snack) {
             print("elo")
         }
@@ -38,22 +39,24 @@ class FoodViewController: UIViewController, Storyboarded {
     }
 }
 
-// MARK: TableView Delegate Methods
-extension FoodViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+// MARK: CollectionView Delegate Methods
+extension FoodViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
         return testCell.count
     }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = foodTableView.dequeueReusableCell(withIdentifier: "FoodCell", for: indexPath)
-        cell.textLabel?.text = testCell[indexPath.row]
-        cell.textLabel?.textColor = .white
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return testCell.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = foodCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MyCollectionViewCell
+        cell.titleLabel.text = testCell[indexPath.row]
+        cell.titleLabel.textColor = .white
         return cell
     }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        guard let selectedRow = foodTableView.indexPathForSelectedRow else { return }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         coordinator?.detailFoodView()
     }
 }
