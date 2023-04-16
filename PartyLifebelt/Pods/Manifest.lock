@@ -1,20 +1,28 @@
 PODS:
+  - Alamofire (5.6.2)
   - AMPopTip (4.10.0)
   - AMTooltip (1.0.4)
+  - SwiftyJSON (5.0.1)
 
 DEPENDENCIES:
+  - Alamofire
   - AMPopTip
   - AMTooltip
+  - SwiftyJSON
 
 SPEC REPOS:
   trunk:
+    - Alamofire
     - AMPopTip
     - AMTooltip
+    - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Alamofire: d368e1ff8a298e6dde360e35a3e68e6c610e7204
   AMPopTip: 4630471652faf06872f72a39bfcb6f5b68a7e208
   AMTooltip: 30aa4acb70968e99d24f72c35153ace0c896d99f
+  SwiftyJSON: 2f33a42c6fbc52764d96f13368585094bfd8aa5e
 
-PODFILE CHECKSUM: 6d0c218c86d650c6fe1b102fff7698f39346ea32
+PODFILE CHECKSUM: 8b7243e37bc2aef225f335b9ea399c48f1e56924
 
 COCOAPODS: 1.11.3
