@@ -7,18 +7,6 @@
 
 import Foundation
 
-struct FoodModel: Codable {
-    let from, to, count: Int
-    let links: FoodModelLinks
-    let hits: [Hit]
-
-    enum CodingKeys: String, CodingKey {
-        case from, to, count
-        case links = "_links"
-        case hits
-    }
-}
-
 // MARK: - Hit
 struct Hit: Codable {
     let recipe: Recipe
