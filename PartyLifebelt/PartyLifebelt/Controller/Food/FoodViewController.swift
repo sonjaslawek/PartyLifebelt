@@ -9,22 +9,28 @@ import UIKit
 
 class FoodViewController: UIViewController, Storyboarded {
     
-    @IBOutlet weak var foodTableView: UITableView!
+   
     weak var coordinator: MainCoordinator?
+    @IBOutlet weak var foodCollectionView: UICollectionView!
     var foodAPI = FoodData()
-    var foodModel: [FoodModel] = []
-    var testCell = ["jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy", "jeden", "dwa", "trzy"]
+    var foodModel: [Hit] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        foodCollectionView.dataSource = self
+        foodCollectionView.delegate = self
         setNavigationBarImage()
-        foodTableView.delegate = self
-        foodTableView.dataSource = self
-        foodAPI.getFoodData(endPoint: .snack) {
-            print("elo")
-        }
+        loadFoodData()
     }
-    
+    func loadFoodData() {
+        foodAPI.getFoodData(endPoint: .brunch, completed: {
+            print(self.foodAPI.foodModel.count)
+            DispatchQueue.main.async {
+                self.foodModel = self.foodAPI.foodModel[0].hits
+                self.foodCollectionView.reloadData()
+            }
+        })
+    }
     // MARK: Setting Navigation Bar
     private func setNavigationBarImage() {
         let backButton = UIBarButtonItem(image: UIImage(named: "homeButton"), style: .plain, target: self, action: #selector(goTo))
@@ -37,23 +43,31 @@ class FoodViewController: UIViewController, Storyboarded {
         coordinator?.start()
     }
 }
-
-// MARK: TableView Delegate Methods
-extension FoodViewController: UITableViewDelegate, UITableViewDataSource {
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return testCell.count
-    }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = foodTableView.dequeueReusableCell(withIdentifier: "FoodCell", for: indexPath)
-        cell.textLabel?.text = testCell[indexPath.row]
-        cell.textLabel?.textColor = .white
+
+
+// MARK: CollectionView Delegate Methods
+extension FoodViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return foodModel.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return foodModel.count
+    }
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = foodCollectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! MyCollectionViewCell
+        cell.titleLabel.text = foodModel[indexPath.row].recipe.label
+        print("TESTUJE \(foodModel[indexPath.row].recipe.label)")
+        cell.titleLabel.textColor = .white
+        let img = foodModel[indexPath.item].recipe.images.small.url
+        cell.imageView.image = UIImage(named: img)
         return cell
     }
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        guard let selectedRow = foodTableView.indexPathForSelectedRow else { return }
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         coordinator?.detailFoodView()
     }
 }
